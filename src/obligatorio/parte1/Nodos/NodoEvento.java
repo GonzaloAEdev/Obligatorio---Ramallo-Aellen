@@ -47,14 +47,6 @@ public class NodoEvento {
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
-    
-    public String getNombre() {
-        return descripcion;
-    }
-
-    public void setNombre(String nombre) {
-        this.descripcion = nombre;
-    }
 
     public NodoEvento getSiguiente() {
         return siguiente;
@@ -79,7 +71,7 @@ public class NodoEvento {
     public void setLentrada(ListaEntrada lentrada) {
         this.lentrada = lentrada;
     }
-    public int compareTo(NodoSala otro) {
+    public int compareTo(NodoEvento otro) {
         return this.codigo.compareTo(otro.codigo);
     }
 
@@ -97,4 +89,5 @@ public class NodoEvento {
     public int hashCode() {
         return codigo.hashCode();
     }
+    
 }

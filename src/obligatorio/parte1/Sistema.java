@@ -45,19 +45,19 @@ public class Sistema implements IObligatorio {
     // 1.4
     @Override
     public Retorno registrarEvento(String codigo, String descripcion, int aforoNecesario, LocalDate fecha) {
-        NodoSala nsdisponible= ls.obtenerElementoSegunAforo(aforoNecesario);
-        
-        if (nsdisponible!=null){
-            System.out.println("Encontre una sala " + nsdisponible.getNombre()+" capacidad "+ nsdisponible.getCapacidad()+ " Para el aforo " +aforoNecesario);
-            nsdisponible.getLevento().agregarOrd(Integer.parseInt(codigo), descripcion, aforoNecesario);
-       
-        
-        
+        NodoSala nsdisponible= ls.encontrarSalaDisponible(aforoNecesario, fecha, codigo);
+        if(ls.getPrimero().getLevento().buscarelemento(codigo)){
+            return new Retorno(Retorno.Resultado.ERROR_1); // ya existe un evento con este codigo
+        }else if(aforoNecesario <= 0){
+            return new Retorno(Retorno.Resultado.ERROR_2); // Aforo es necesario
+        }else if (nsdisponible ==null){
+            return new Retorno(Retorno.Resultado.ERROR_3); // No hay salas disponibles para esta fecha con aforo suficiente
         }else{
-            System.out.println("No hay Sala para ese aforo "+ aforoNecesario);
+            System.out.println("Encontre una sala " + nsdisponible.getNombre()+" capacidad "
+                    + nsdisponible.getCapacidad()+ " Para el aforo " +aforoNecesario+" Para la fecha "+fecha);
+            nsdisponible.getLevento().agregarOrd(codigo,descripcion,aforoNecesario,fecha);
+            return Retorno.ok();
         }
-        
-        return Retorno.noImplementada();
     }
 
     @Override

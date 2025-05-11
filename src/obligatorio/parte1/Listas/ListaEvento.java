@@ -1,6 +1,7 @@
 
 package obligatorio.parte1.Listas;
 
+import java.time.LocalDate;
 import obligatorio.parte1.Interfaces.IListaEvento;
 import obligatorio.parte1.Nodos.NodoEvento;
 
@@ -52,8 +53,8 @@ public class ListaEvento implements IListaEvento {
        }
 
     @Override
-    public void agregarInicio(int nro, String nombre,int aforo) {
-        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);
+    public void agregarInicio(String codigo,String descripcion,int aforo, LocalDate fecha) {
+        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
         if (this.esVacia()){
             this.setPrimero(nuevo);
             this.setUltimo(nuevo);
@@ -65,8 +66,8 @@ public class ListaEvento implements IListaEvento {
     }
 
     @Override
-    public void agregarFinal(String, String descripcion,int aforo) {
-        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);
+    public void agregarFinal(String codigo,String descripcion,int aforo, LocalDate fecha) {
+        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
         if (this.esVacia()){
             this.setPrimero(nuevo);
             this.setUltimo(nuevo);            
@@ -77,25 +78,25 @@ public class ListaEvento implements IListaEvento {
         this.cantnodos++;
     }
 
-    @Override
-    public void agregarOrd(int nro, String descripcion,int aforo) {
-       NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);
-       if (this.esVacia() || nro < this.getPrimero().getNro()){
-           this.agregarInicio(nro, nombre,aforo);
-       }else{
-           if (nro > this.getUltimo().getNro()){
-               this.agregarFinal(nro, nombre,aforo);
-           }else{
-               NodoEvento actual = this.getPrimero();
-               while (actual.siguiente!=null && nro> actual.siguiente.nro){
-                   actual=actual.siguiente;
-               }
-               nuevo.setSiguiente(actual.getSiguiente());
-               actual.setSiguiente(nuevo);
-               this.cantnodos++;
-           }
-       
-       }
+ @Override
+    public void agregarOrd(String codigo,String descripcion,int aforo, LocalDate fecha) {
+        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
+        if (this.esVacia() || codigo.compareTo(this.getPrimero().getCodigo()) < 0) {
+            this.agregarInicio(codigo,descripcion,aforo,fecha);
+        } else {
+            if (codigo.compareTo(this.getUltimo().getCodigo()) > 0) {
+                this.agregarFinal(codigo,descripcion,aforo,fecha);
+            } else {
+                NodoEvento actual = this.getPrimero();
+                while (actual.siguiente != null && 
+                       codigo.compareTo(actual.siguiente.getCodigo()) > 0) {
+                    actual = actual.siguiente;
+                }
+                nuevo.setSiguiente(actual.getSiguiente());
+                actual.setSiguiente(nuevo);
+                this.cantnodos++;
+            }
+        }
     }
 
     @Override
@@ -111,7 +112,7 @@ public class ListaEvento implements IListaEvento {
             }
                         
         }else{
-            System.out.println("no hay elementos en la lista");
+            System.out.println("No hay eventos existentes");
         }
 
     }
@@ -133,17 +134,17 @@ public class ListaEvento implements IListaEvento {
                  this.cantnodos--;
             }
      }else{
-         System.out.println("no hay elementos en la lista");
+         System.out.println("No hay eventos existentes");
      }       
     }
 
     @Override
-    public void borrarElemento(int nro, String nombre) {
+    public void borrarElemento(String codigo) {
        if (!this.esVacia()) {
             NodoEvento aux = this.getPrimero();
             boolean borrado = false;
             while (aux != null && aux.getSiguiente() != null && !borrado) {
-                if (aux.siguiente.getNro() == nro && aux.siguiente.getNombre().compareTo(nombre)==0) {
+                if (aux.siguiente.getCodigo().compareTo(codigo)==0) {
                     aux.siguiente = aux.siguiente.siguiente;
                     borrado = true;
                 }
@@ -151,17 +152,17 @@ public class ListaEvento implements IListaEvento {
                 this.cantnodos--;
             }
         } else {
-            System.out.println("lista vacia, no hay elementos para borrar");
+            System.out.println("No hay eventos existentes");
         }     
 
     }
 
     @Override
-    public boolean buscarelemento(int nro, String nombre) {
+    public boolean buscarelemento(String codigo) {
       NodoEvento aux=this.getPrimero();
         boolean existe=false;
         while (aux!=null && !existe){
-            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){
+            if (aux.getCodigo().compareTo(codigo)==0){
                 existe=true;
             }
             aux=aux.siguiente;
@@ -169,36 +170,13 @@ public class ListaEvento implements IListaEvento {
         return existe;  
 
     }
-    
-    public boolean buscarelementoPorNro(int nro, String nombre) {
-        NodoEvento aux=this.getPrimero();
-        boolean existe=false;
-        while (aux!=null && !existe){
-            if (aux.getNro()==nro){
-                existe=true;
-            }
-            aux=aux.siguiente;
-        }
-        return existe;
-    }
-    
-    public boolean buscarelementoPorNom(int nro, String nombre) {
-        NodoEvento aux=this.getPrimero();
-        boolean existe=false;
-        while (aux!=null && !existe){
-            if (aux.getNombre().compareTo(nombre)==0){
-                existe=true;
-            }
-            aux=aux.siguiente;
-        }
-        return existe;    }     
 
     @Override
-    public NodoEvento obtenerElemento(int nro, String nombre) {
+    public NodoEvento obtenerElemento(String codigo) {
       NodoEvento aux=this.getPrimero();
         NodoEvento existe=null;
         while (aux!=null && existe==null){
-            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){
+            if (aux.getCodigo().compareTo(codigo)==0){
                 existe=aux;
             }
             aux=aux.siguiente;
@@ -212,12 +190,14 @@ public class ListaEvento implements IListaEvento {
                 this.setUltimo(null);
                 this.cantnodos=0;               
     }
-
+    
     @Override
     public void mostrar() {
         NodoEvento aux= this.getPrimero();
         while(aux!=null){
-            System.out.println("Nro = "+aux.getNro()+" - Nombre= " +aux.getNombre()+" - Aforo: "+aux.getAforo());
+            System.out.println(aux.getCodigo()+" - "+aux.getDescripcion()+" - "
+                    +(aux.getAforo() - aux.getLentrada().cantnodos)+" - "
+                    +aux.getLentrada().cantnodos);
             aux=aux.siguiente;
         }
         System.out.println();
@@ -246,10 +226,10 @@ public class ListaEvento implements IListaEvento {
             return " ";
         }
         if (primero==siguiente){
-            return  siguiente.getNro()+" - "+ siguiente.getNombre();
+            return  siguiente.getCodigo()+" - "+ siguiente.getDescripcion();
         }else{
         
-            return primero.getNro()+" "+ primero.getNombre()+ " - "+mostrarRecAsc(primero.getSiguiente(),siguiente);
+            return primero.getCodigo()+" "+ primero.getDescripcion()+ " - "+mostrarRecAsc(primero.getSiguiente(),siguiente);
         }
         
     
@@ -260,10 +240,10 @@ public class ListaEvento implements IListaEvento {
             return " ";
         }
         if (primero==siguiente){
-            return  siguiente.getNro()+" - "+ siguiente.getNombre();
+            return  siguiente.getCodigo()+" - "+ siguiente.getDescripcion();
         }else{
         
-            return mostrarRecDsc(primero.getSiguiente(),siguiente)+ primero.getNro()+" "+ primero.getNombre()+ " - ";
+            return mostrarRecDsc(primero.getSiguiente(),siguiente)+ primero.getCodigo()+" "+ primero.getDescripcion()+ " - ";
         }
         
     

@@ -1,7 +1,9 @@
 
 package obligatorio.parte1.Listas;
 
+import java.time.LocalDate;
 import obligatorio.parte1.Interfaces.IListaSala;
+import obligatorio.parte1.Nodos.NodoEvento;
 import obligatorio.parte1.Nodos.NodoSala;
 
 
@@ -210,8 +212,6 @@ public class ListaSala implements IListaSala {
         
     }
     
-    
-
     @Override
     public void vaciar() {
                this.setPrimero(null);
@@ -274,6 +274,38 @@ public class ListaSala implements IListaSala {
         
     
     }    
+   // Método auxiliar para encontrar sala disponible
+    public NodoSala encontrarSalaDisponible(int aforoNecesario, LocalDate fecha,String codigo) {
+        NodoSala actual = this.getPrimero();
+        NodoSala mejorSala = null;
     
+         while (actual != null) {
+        // Verificar si la sala cumple con el aforo y no tiene eventos en esa fecha
+            if (actual.getCapacidad() >= aforoNecesario && 
+                !tieneEventoEnFecha(actual, fecha,codigo)) {
+            
+            // Seleccionar la sala con capacidad más ajustada al aforo necesario
+                if (mejorSala == null || 
+                actual.getCapacidad() < mejorSala.getCapacidad()) {
+                mejorSala = actual;
+                }
+            }
+            actual = actual.getSiguiente();
+        }
+    
+        return mejorSala;
+    }
+
+// Método auxiliar para verificar si una sala tiene eventos en una fecha específica
+    private boolean tieneEventoEnFecha(NodoSala sala, LocalDate fecha,String codigo) {
+        NodoEvento eventoActual = sala.getLevento().obtenerElemento(codigo);
+        while (eventoActual != null) {
+            if (eventoActual.getFecha() == fecha) {
+                return true;
+            }
+            eventoActual = eventoActual.getSiguiente();
+        }
+        return false;
+    }
  
 }
