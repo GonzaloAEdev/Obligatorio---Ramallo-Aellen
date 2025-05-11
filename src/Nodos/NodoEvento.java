@@ -1,7 +1,7 @@
-package obligatorio.parte1.Nodos;
+package Nodos;
 
 import java.time.LocalDate;
-import obligatorio.parte1.Listas.ListaEntrada;
+import Listas.ListaEntrada;
 
 public class NodoEvento {
     public String codigo;
@@ -10,15 +10,18 @@ public class NodoEvento {
     public NodoEvento siguiente;
     public ListaEntrada lentrada;
     public LocalDate fecha;
-    
+    public NodoSala salaAsignada;
+
 // constructor
-    public NodoEvento(String codigo, String descripcion,int aforo, LocalDate fecha) {
+    public NodoEvento(String codigo, String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.aforo= aforo;
         this.fecha= fecha;
         this.siguiente = null;
         this.lentrada= new ListaEntrada(aforo);
+        this.salaAsignada = salaAsignada;
+
     }
 
 // set y get
@@ -70,6 +73,16 @@ public class NodoEvento {
     public void setLentrada(ListaEntrada lentrada) {
         this.lentrada = lentrada;
     }
+    
+    public NodoSala getSalaAsignada() {
+        return salaAsignada;
+    }
+
+    public void setSalaAsignada(NodoSala salaAsignada) {
+        this.salaAsignada = salaAsignada;
+    }
+    
+    // Implementacion de CompareTo
     public int compareTo(NodoEvento otro) {
         return this.codigo.compareTo(otro.codigo);
     }

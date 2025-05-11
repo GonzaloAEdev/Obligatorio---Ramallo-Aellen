@@ -1,6 +1,6 @@
-package obligatorio.parte1.Nodos;
+package Nodos;
 
-import obligatorio.parte1.Listas.ListaEvento;
+import Listas.ListaEvento;
 
 public class NodoSala {
 

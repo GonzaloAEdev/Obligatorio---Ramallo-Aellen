@@ -1,10 +1,10 @@
 
-package obligatorio.parte1.Listas;
+package Listas;
 
 import java.time.LocalDate;
-import obligatorio.parte1.Interfaces.IListaSala;
-import obligatorio.parte1.Nodos.NodoEvento;
-import obligatorio.parte1.Nodos.NodoSala;
+import Interfaces.IListaSala;
+import Nodos.NodoEvento;
+import Nodos.NodoSala;
 
 
 public class ListaSala implements IListaSala {

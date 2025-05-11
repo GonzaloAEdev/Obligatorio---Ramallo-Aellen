@@ -1,4 +1,4 @@
-package obligatorio.parte1.Nodos;
+package Nodos;
 
 public class NodoCliente {
     String cedula;

@@ -1,14 +1,14 @@
-package obligatorio.parte1.Interfaces;
-
+package Interfaces;
 
 import java.time.LocalDate;
-import obligatorio.parte1.NodoEvento;
+import Nodos.NodoEvento;
+import Nodos.NodoSala;
 
 public interface IListaEvento {
     public boolean esVacia();
-    public void agregarInicio(String codigo, String descripcion,int aforo, LocalDate fecha);
-    public void agregarFinal(String codigo, String descripcion,int aforo, LocalDate fecha);
-    public void agregarOrd(String codigo, String descripcion,int aforo, LocalDate fecha);
+    public void agregarInicio(String codigo, String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada);
+    public void agregarFinal(String codigo, String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada);
+    public void agregarOrd(String codigo, String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada);
     public void borrarInicio();
     public void borrarFin();
     public void borrarElemento(String codigo);

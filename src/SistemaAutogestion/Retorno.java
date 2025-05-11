@@ -1,4 +1,4 @@
-package obligatorio.parte1;
+package SistemaAutogestion;
 
 public class Retorno {
 

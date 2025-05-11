@@ -1,7 +1,7 @@
-package obligatorio.parte1.Listas;
+package Listas;
 
-import obligatorio.parte1.Interfaces.IListaCliente;
-import obligatorio.parte1.Nodos.NodoCliente;
+import Interfaces.IListaCliente;
+import Nodos.NodoCliente;
 
 public class ListaCliente implements IListaCliente {
     NodoCliente primero;

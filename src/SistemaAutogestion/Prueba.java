@@ -1,7 +1,7 @@
-package obligatorio.parte1;
+package SistemaAutogestion;
 
-import obligatorio.parte1.Retorno.Resultado;
-import static obligatorio.parte1.Retorno.Resultado.NO_IMPLEMENTADA;
+import SistemaAutogestion.Retorno.Resultado;
+import static SistemaAutogestion.Retorno.Resultado.NO_IMPLEMENTADA;
 
 public class Prueba {
 

@@ -1,6 +1,6 @@
-package obligatorio.parte1;
+package SistemaAutogestion;
 
-import obligatorio.parte1.Interfaces.IObligatorio;
+import Interfaces.IObligatorio;
 import java.time.LocalDate;
 
 

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 // Este Lista es por el momento para que los Eventos tengan una Lista de Entradas
->>>>>>> ramaDeRama
-package obligatorio.parte1.Listas;
+package Listas;
 
-import obligatorio.parte1.Interfaces.IListaEntrada;
-import obligatorio.parte1.Nodos.NodoEntrada;
+import Interfaces.IListaEntrada;
+import Nodos.NodoEntrada;
 
 public class ListaEntrada implements IListaEntrada {
 
@@ -197,9 +194,6 @@ public class ListaEntrada implements IListaEntrada {
         return existe;
 
     }
-<<<<<<< HEAD
-
-=======
 /*
 >>>>>>> ramaDeRama
     public boolean buscarelementoPorNro(int nro, String nombre) {
@@ -225,11 +219,7 @@ public class ListaEntrada implements IListaEntrada {
         }
         return existe;
     }
-<<<<<<< HEAD
-
-=======
 */
->>>>>>> ramaDeRama
     @Override
     public NodoEntrada obtenerElemento(int nro, String nombre) {
         NodoEntrada aux = this.getPrimero();

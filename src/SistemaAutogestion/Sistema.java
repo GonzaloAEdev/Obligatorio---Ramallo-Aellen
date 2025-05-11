@@ -1,16 +1,17 @@
-package obligatorio.parte1;
+package SistemaAutogestion;
 
-import obligatorio.parte1.Nodos.NodoSala;
-import obligatorio.parte1.Listas.ListaSala;
-import obligatorio.parte1.Listas.ListaCliente;
-import obligatorio.parte1.Listas.ListaEvento;
-import obligatorio.parte1.Interfaces.IObligatorio;
+import Nodos.NodoSala;
+import Listas.ListaSala;
+import Listas.ListaCliente;
+import Listas.ListaEvento;
+import Interfaces.IObligatorio;
 import java.time.LocalDate;
 
 public class Sistema implements IObligatorio {
     
     ListaSala ls;
     ListaCliente lc;
+    ListaEvento le;
 
     @Override
     // 1.1
@@ -57,7 +58,7 @@ public class Sistema implements IObligatorio {
         }else{
             System.out.println("Encontre una sala " + nsdisponible.getNombre()+" capacidad "
                     + nsdisponible.getCapacidad()+ " Para el aforo " +aforoNecesario+" Para la fecha "+fecha);
-            nsdisponible.getLevento().agregarOrd(codigo,descripcion,aforoNecesario,fecha);
+            nsdisponible.getLevento().agregarOrd(codigo,descripcion,aforoNecesario,fecha,nsdisponible);
             return Retorno.ok();
         }
 

@@ -1,7 +1,7 @@
 // Este Interfaces es por el momento para que los eventos tengan una Lista de Entradas
-package obligatorio.parte1.Interfaces;
+package Interfaces;
 
-import obligatorio.parte1.Nodos.NodoEntrada;
+import Nodos.NodoEntrada;
 
 public interface IListaEntrada {
     public boolean esLLena();

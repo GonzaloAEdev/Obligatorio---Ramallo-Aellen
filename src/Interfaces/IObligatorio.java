@@ -1,7 +1,7 @@
-package obligatorio.parte1.Interfaces;
+package Interfaces;
 
 import java.time.LocalDate;
-import obligatorio.parte1.Retorno;
+import SistemaAutogestion.Retorno;
 
 public interface IObligatorio {
 

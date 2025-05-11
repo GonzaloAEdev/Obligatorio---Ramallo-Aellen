@@ -1,6 +1,6 @@
-package obligatorio.parte1.Interfaces;
+package Interfaces;
 
-import obligatorio.parte1.Nodos.NodoCliente;
+import Nodos.NodoCliente;
 
 public interface IListaCliente {
     public boolean esVacia();

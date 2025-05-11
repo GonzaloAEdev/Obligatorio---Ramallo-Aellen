@@ -1,8 +1,9 @@
-package obligatorio.parte1.Listas;
+package Listas;
 
 import java.time.LocalDate;
-import obligatorio.parte1.Interfaces.IListaEvento;
-import obligatorio.parte1.Nodos.NodoEvento;
+import Interfaces.IListaEvento;
+import Nodos.NodoEvento;
+import Nodos.NodoSala;
 
 public class ListaEvento implements IListaEvento {
     NodoEvento primero;
@@ -53,8 +54,8 @@ public class ListaEvento implements IListaEvento {
        }
 
     @Override
-    public void agregarInicio(String codigo,String descripcion,int aforo, LocalDate fecha) {
-        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
+    public void agregarInicio(String codigo,String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada) {
+        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha,salaAsignada);
 
         if (this.esVacia()){
             this.setPrimero(nuevo);
@@ -67,8 +68,8 @@ public class ListaEvento implements IListaEvento {
     }
 
     @Override
-    public void agregarFinal(String codigo,String descripcion,int aforo, LocalDate fecha) {
-        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
+    public void agregarFinal(String codigo,String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada) {
+        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha,salaAsignada);
         if (this.esVacia()){
             this.setPrimero(nuevo);
             this.setUltimo(nuevo);            
@@ -80,13 +81,13 @@ public class ListaEvento implements IListaEvento {
     }
 
  @Override
-    public void agregarOrd(String codigo,String descripcion,int aforo, LocalDate fecha) {
-        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
+    public void agregarOrd(String codigo,String descripcion,int aforo, LocalDate fecha, NodoSala salaAsignada) {
+        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha,salaAsignada);
         if (this.esVacia() || codigo.compareTo(this.getPrimero().getCodigo()) < 0) {
-            this.agregarInicio(codigo,descripcion,aforo,fecha);
+            this.agregarInicio(codigo,descripcion,aforo,fecha,salaAsignada);
         } else {
             if (codigo.compareTo(this.getUltimo().getCodigo()) > 0) {
-                this.agregarFinal(codigo,descripcion,aforo,fecha);
+                this.agregarFinal(codigo,descripcion,aforo,fecha,salaAsignada);
             } else {
                 NodoEvento actual = this.getPrimero();
                 while (actual.siguiente != null && 
@@ -173,10 +174,9 @@ public class ListaEvento implements IListaEvento {
 
     }
     
-    /*
     @Override
     public NodoEvento obtenerElemento(String codigo) {
-      NodoEvento aux=this.getPrimero();
+      NodoEvento aux = this.getPrimero();
         NodoEvento existe=null;
         while (aux!=null && existe==null){
             if (aux.getCodigo().compareTo(codigo)==0){
@@ -185,7 +185,7 @@ public class ListaEvento implements IListaEvento {
             aux=aux.siguiente;
         }
         return existe;  
-    }*/
+    }
 
     @Override
     public void vaciar() {
@@ -198,7 +198,7 @@ public class ListaEvento implements IListaEvento {
     public void mostrar() {
         NodoEvento aux= this.getPrimero();
         while(aux!=null){
-            System.out.println(aux.getCodigo()+" - "+aux.getDescripcion()+" - "
+            System.out.println(aux.getCodigo()+" - "+aux.getDescripcion()+" - "+aux.getSalaAsignada().getNombre()+" - "
                     +(aux.getAforo() - aux.getLentrada().cantnodos)+" - "
                     +aux.getLentrada().cantnodos);
             aux=aux.siguiente;
@@ -250,13 +250,6 @@ public class ListaEvento implements IListaEvento {
         }
         
     
-    }    
-
-    @Override
-    public obligatorio.parte1.NodoEvento obtenerElemento(String codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
- 
+    }   
 }
 
