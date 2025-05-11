@@ -233,6 +233,15 @@ public class ListaSala implements IListaSala {
         System.out.println();
     }
 
+     public void mostrarEventos() {
+        NodoSala salaActual = primero;
+        while (salaActual != null) {
+            System.out.println("\n--- Eventos de la Sala: " + salaActual.getNombre() + " ---");
+            // Obtener la lista de eventos de la sala actual y mostrarla
+            salaActual.getLevento().mostrar();
+            salaActual = salaActual.getSiguiente();
+        }
+    }
     @Override
     public int cantElementos() {
         return this.cantnodos;
@@ -277,38 +286,32 @@ public class ListaSala implements IListaSala {
         }
         
     
-    }    
-   // Método auxiliar para encontrar sala disponible
-    public NodoSala encontrarSalaDisponible(int aforoNecesario, LocalDate fecha,String codigo) {
+    }   
+   
+    public NodoSala encontrarSalaDisponible(int aforoNecesario, LocalDate fecha) {  // Eliminar parámetro codigo
         NodoSala actual = this.getPrimero();
         NodoSala mejorSala = null;
     
-         while (actual != null) {
-        // Verificar si la sala cumple con el aforo y no tiene eventos en esa fecha
-            if (actual.getCapacidad() >= aforoNecesario && 
-                !tieneEventoEnFecha(actual, fecha,codigo)) {
-            
-            // Seleccionar la sala con capacidad más ajustada al aforo necesario
-                if (mejorSala == null || 
-                actual.getCapacidad() < mejorSala.getCapacidad()) {
-                mejorSala = actual;
-                }
-            }
-            actual = actual.getSiguiente();
-        }
-    
+        while (actual != null) {
+         if (actual.getCapacidad() >= aforoNecesario && 
+                !tieneEventoEnFecha(actual, fecha)) {  // Quitar codigo del llamado
+                if (mejorSala == null || actual.getCapacidad() < mejorSala.getCapacidad()) {
+                   mejorSala = actual;
+             }
+          }
+         actual = actual.getSiguiente();
+     }
         return mejorSala;
     }
 
-// Método auxiliar para verificar si una sala tiene eventos en una fecha específica
-    private boolean tieneEventoEnFecha(NodoSala sala, LocalDate fecha,String codigo) {
-        NodoEvento eventoActual = sala.getLevento().obtenerElemento(codigo);
+    private boolean tieneEventoEnFecha(NodoSala sala, LocalDate fecha) {  // Eliminar parámetro codigo
+        NodoEvento eventoActual = sala.getLevento().getPrimero();  // Partir desde el primer evento
         while (eventoActual != null) {
-            if (eventoActual.getFecha() == fecha) {
+            if (eventoActual.getFecha().equals(fecha)) {
                 return true;
             }
             eventoActual = eventoActual.getSiguiente();
         }
         return false;
-    }
+}
 }

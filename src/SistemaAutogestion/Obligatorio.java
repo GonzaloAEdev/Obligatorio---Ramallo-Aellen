@@ -2,8 +2,6 @@ package SistemaAutogestion;
 
 import Interfaces.IObligatorio;
 import java.time.LocalDate;
-import java.time.Month;
-
 
 public class Obligatorio {
   
@@ -23,57 +21,50 @@ public static void juegoPruebas(Prueba p, IObligatorio s) {
 
         // 1.2 - Registrar salas
         p.ver(s.registrarSala("Sala A", 45).resultado, Retorno.Resultado.OK, "Registrar sala A");
-        p.ver(s.registrarSala("Sala A", 30).resultado, Retorno.Resultado.ERROR_1, "Ya existe una sala conese nombre");
+        p.ver(s.registrarSala("Sala A", 30).resultado, Retorno.Resultado.ERROR_1, "Ya existe una sala con ese nombre");
         p.ver(s.registrarSala("Sala X", -5).resultado, Retorno.Resultado.ERROR_2, "Capacidad negativa");
         
             
         p.ver(s.registrarSala("Sala C", 40).resultado, Retorno.Resultado.OK, "Registrar sala C");
         p.ver(s.registrarSala("Sala D", 60).resultado, Retorno.Resultado.OK, "Registrar Sala D");
         p.ver(s.registrarSala("Sala E", 70).resultado, Retorno.Resultado.OK, "Registrar Sala E");
-        p.ver(s.registrarSala("Sala C", 60).resultado, Retorno.Resultado.ERROR_1, "Ya existe una sala conese nombre");
-
-        // Mostrar salas
-        p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas luego de registros");
+        p.ver(s.registrarSala("Sala C", 60).resultado, Retorno.Resultado.ERROR_1, "Ya existe una sala con ese nombre (Sala C)");
 
         // 1.3 - Eliminar sala
-        p.ver(s.eliminarSala("Sala X").resultado, Retorno.Resultado.ERROR_1, "no existe una sala conese nombre");
+        p.ver(s.eliminarSala("Sala X").resultado, Retorno.Resultado.ERROR_1, "No existe una sala con ese nombre (Sala X)");
         p.ver(s.eliminarSala("Sala D").resultado, Retorno.Resultado.OK, "Sala D eliminada");
 
-        // Mostrar salas despues de eliminar
-        p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas luego de eliminaciones");
-
         // 1.4 - Registrar eventos
-            LocalDate fecha = LocalDate.of(2025, 6, 10);
+        LocalDate fecha = LocalDate.of(2025, 6, 10);
         
-        p.ver(s.registrarEvento("XLR8B10","Concierto Duki", 100, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.ERROR_3, "No se encontro una sala para ese aforo en ese día");
         p.ver(s.registrarEvento("BBCITA1","Orquesta Nacional", 50, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Evento Orquesta Nacional registrado");
-        p.ver(s.registrarEvento("3ICKKCK","Orquesta Juvenil", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
-        p.ver(s.registrarEvento("123ABCD","Concierto Duki", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
+        p.ver(s.registrarEvento("3ICKKCK","Orquesta Juvenil", 60, fecha).resultado, Retorno.Resultado.OK, "Evento Orquesta Juvenil registrado");
+        p.ver(s.registrarEvento("123ABCD","Concierto Duki", 45, LocalDate.of(2025,6,2)).resultado, Retorno.Resultado.OK, "Evento Duki registrado");
         
         
-        /*
-        p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.OK, "Registrar evento valido");
-        p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.ERROR_1, "Ya existe evento con ese codigo (EV108) Registrar evento valido");
-        p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.ERROR_1, "Ya existe evento con ese codigo (EV108) Registrar evento valido");
-        p.ver(s.registrarEvento("EV108", "Evento B", 25, fecha).resultado, Retorno.Resultado.ERROR_3, "Codigo duplicado");
-        p.ver(s.registrarEvento("EV102", "Evento C", -1, fecha).resultado, Retorno.Resultado.ERROR_2, "Aforo negativo");
-*/
-        p.ver(s.registrarEvento("EV108", "Evento A", 3000, fecha).resultado, Retorno.Resultado.ERROR_5, "No hay sala para ese aforo");
-
+        p.ver(s.registrarEvento("123ABCD","El cisne azul", 30, LocalDate.of(2025,8,23)).resultado, Retorno.Resultado.ERROR_1, "Ya existe un evento con ese codigo");
+        p.ver(s.registrarEvento("ABC2322","Ruben Rada", 0, LocalDate.of(2025,11,11)).resultado, Retorno.Resultado.ERROR_2, "El aforo debe ser mayor a 0");
+        p.ver(s.registrarEvento("XMELRA2","El hombre de nieve", 60, fecha).resultado, Retorno.Resultado.ERROR_3, "Ya existe un evento para esa fecha");
+        p.ver(s.registrarEvento("XLR8B10","Concierto Duki", 100, LocalDate.of(2025,6,2)).resultado, Retorno.Resultado.ERROR_3, "No se encontro una sala para ese aforo en ese dia");
         
-        // Mostrar eventos
-        p.ver(s.listarEventos().resultado, Retorno.Resultado.OK, "Listar eventos registrados");
-
         // 1.5 - Registrar clientes
-        p.ver(s.registrarCliente("1234", "Cliente X").resultado, Retorno.Resultado.ERROR_1, "Cedula invalida (corta)");
-        
-        p.ver(s.registrarCliente("12345678", "Carlos").resultado, Retorno.Resultado.OK, "Cliente valido");
-        p.ver(s.registrarCliente("12345678", "Carlos").resultado, Retorno.Resultado.ERROR_2, "Cliente ya existe");
-       // p.ver(s.registrarCliente("12345678", "").resultado, Retorno.Resultado.ERROR_3, "Nombre vacio");      
-        // Mostrar clientes
-        p.ver(s.listarClientes().resultado, Retorno.Resultado.OK, "Listar clientes registrados");
+        p.ver(s.registrarCliente("4305", "Mathias").resultado, Retorno.Resultado.ERROR_2, "Cedula invalida (Debe tener al menos 8 numeros)");
 
-        // 2.4 - Evaluar sala optima - matriz optima
+        p.ver(s.registrarCliente("4305673-1", "Mathias").resultado, Retorno.Resultado.OK, "Cliente creado con exito");
+        p.ver(s.registrarCliente("4305673-1", "Mathias").resultado, Retorno.Resultado.ERROR_4, "Cliente ya existe");
+        p.ver(s.registrarCliente("4305673-1", "").resultado, Retorno.Resultado.ERROR_3, "Nombre vacio"); 
+
+        
+        // 2.1 - Listar Salas
+        p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas registrados");
+        
+        // 2.2 - Listar Eventos
+        p.ver(s.listarEventos().resultado, Retorno.Resultado.OK, "Listar eventos registrados");
+        
+        // 2.3 - Listar Clientes
+        p.ver(s.listarClientes().resultado, Retorno.Resultado.OK, "Listar clientes registrados");
+        
+        // 2.4 - Sala optima
         String[][] vistaOptima = {
             {"#", "#", "#", "#", "#"},
             {"#", "O", "O", "X", "#"},
@@ -83,7 +74,6 @@ public static void juegoPruebas(Prueba p, IObligatorio s) {
         };
         p.ver(s.esSalaOptima(vistaOptima).resultado, Retorno.Resultado.OK, "Evaluar sala optima (esperado: Es optimo)");
 
-        // 2.4 - Evaluar sala optima - matriz no optima
         String[][] vistaNoOptima = {
             {"#", "#", "#", "#"},
             {"#", "O", "X", "#"},
@@ -91,7 +81,7 @@ public static void juegoPruebas(Prueba p, IObligatorio s) {
             {"#", "X", "X", "#"},
             {"#", "#", "#", "#"}
         };
-        p.ver(s.esSalaOptima(vistaNoOptima).resultado, Retorno.Resultado.OK, "Evaluar sala no optima (esperado: No es optimo)");
+        p.ver(s.esSalaOptima(vistaNoOptima).resultado, Retorno.Resultado.ERROR_1, "Evaluar sala no optima (esperado: No es optimo)");
 
         Prueba.finPrueba("FIN PRUEBA COMPLETA");
         

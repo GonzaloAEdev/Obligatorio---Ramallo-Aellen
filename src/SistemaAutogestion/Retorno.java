@@ -29,26 +29,7 @@ public class Retorno {
     public static Retorno ok(String valorString) {
         return new Retorno(Resultado.OK, valorString);
     }
-
-    public static Retorno error1ConMensaje(String menssage) {
-        return new Retorno(Resultado.ERROR_1, menssage);
-    }
-
-    public static Retorno error2ConMensaje(String menssage) {
-        return new Retorno(Resultado.ERROR_2, menssage);
-    }
-
-    public static Retorno error3ConMensaje(String menssage) {
-        return new Retorno(Resultado.ERROR_3, menssage);
-    }
-
-    public static Retorno error4ConMensaje(String menssage) {
-        return new Retorno(Resultado.ERROR_4, menssage);
-    }
-
-    public static Retorno error5ConMensaje(String menssage) {
-        return new Retorno(Resultado.ERROR_5, menssage);
-    }
+    
     public static Retorno error1() {
         return new Retorno(Resultado.ERROR_1);
     }
