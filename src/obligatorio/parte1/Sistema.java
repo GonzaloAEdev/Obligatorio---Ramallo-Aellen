@@ -3,6 +3,7 @@ package obligatorio.parte1;
 import obligatorio.parte1.Nodos.NodoSala;
 import obligatorio.parte1.Listas.ListaSala;
 import obligatorio.parte1.Listas.ListaCliente;
+import obligatorio.parte1.Listas.ListaEvento;
 import obligatorio.parte1.Interfaces.IObligatorio;
 import java.time.LocalDate;
 
@@ -10,6 +11,7 @@ public class Sistema implements IObligatorio {
     
     ListaSala ls;
     ListaCliente lc;
+
     @Override
     // 1.1
     public Retorno crearSistemaDeGestion() {     
@@ -58,27 +60,50 @@ public class Sistema implements IObligatorio {
             nsdisponible.getLevento().agregarOrd(codigo,descripcion,aforoNecesario,fecha);
             return Retorno.ok();
         }
+
     }
 
     @Override
     public Retorno registrarCliente(String cedula, String nombre) {
-        return Retorno.noImplementada();
+        // Validación de parámetros
+        if (cedula == null || cedula.isEmpty()) {
+            return Retorno.error1();
+        }
+        
+        if (cedula.length() < 8) {
+            return Retorno.error2();
+        }
+        
+        if (nombre == null || nombre.isEmpty()) {
+            return Retorno.error3();
+        }
+        
+        // Verificar si el cliente ya existe
+        if (lc.buscarelemento(cedula, nombre)) {
+            return Retorno.error4(); 
+        }
+        
+        // Registrar el nuevo cliente
+        lc.agregarOrd(cedula, nombre);
+        return Retorno.ok("Cliente registrado exitosamente");
     }
 
     @Override
     public Retorno listarSalas() {
-       ls.mostrar();
-        return Retorno.noImplementada();
+        ls.mostrar();
+        return Retorno.ok();
     }
 
     @Override
     public Retorno listarEventos() {
-        return Retorno.noImplementada();
+        le.mostrar();
+        return Retorno.ok();
     }
 
     @Override
     public Retorno listarClientes() {
-        return Retorno.noImplementada();
+        lc.mostrar();
+        return Retorno.ok();
     }
 
     @Override

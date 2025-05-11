@@ -4,17 +4,16 @@ import obligatorio.parte1.Nodos.NodoCliente;
 
 public interface IListaCliente {
     public boolean esVacia();
-    public void agregarInicio(int nro, String nombre,int aforo);
-    public void agregarFinal(int nro, String nombre,int aforo);
-    public void agregarOrd(int nro, String nombre,int aforo);
+    public void agregarInicio(String cedula,String nombre);
+    public void agregarFinal(String cedula,String nombre);
+    public void agregarOrd(String cedula,String nombre);
     public void borrarInicio();
     public void borrarFin();
-    public void borrarElemento(int nro, String nombre);
-    public boolean buscarelemento(int nro, String nombre);
-    public NodoCliente obtenerElemento(int nro, String nombre); 
+    public void borrarElemento(String cedula, String nombre);
+    public boolean buscarelemento(String cedula, String nombre);
+    public NodoCliente obtenerElemento(String cedula, String nombre);
     public void vaciar();
     public void mostrar();
     public int cantElementos();
-    public void mostrarREC();   // mostrar recursivo 
-
+    public void mostrarREC();   // mostrar recursivo    
 }

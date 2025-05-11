@@ -1,4 +1,3 @@
-
 package obligatorio.parte1.Nodos;
 
 import obligatorio.parte1.Listas.ListaEvento;

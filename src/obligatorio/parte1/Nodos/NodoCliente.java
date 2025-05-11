@@ -1,34 +1,20 @@
-
 package obligatorio.parte1.Nodos;
 
 public class NodoCliente {
-    public int  nro;
-    public String cedula;
-    public String nombre;
-    public NodoCliente siguiente;
-    
-    // (ListaEntrada lentrada;) No se si incluir la lista de entradas que tiene comrpadas 
-        
+    String cedula;
+    String nombre;
+    public NodoCliente siguiente; // esta puublico para que ande 
+           
 // constructor
-    public NodoCliente(int  nro, String cedula, String nombre, NodoCliente siguiente) {
-        this.nro = nro;
+    
+    public NodoCliente(String cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
-        this.siguiente = siguiente;
+        this.siguiente = null;
         
     }
 
-    
-
 // set y get
-    public int getNro() {
-        return nro;
-    }
-
-    public void setNro(int nro) {
-        this.nro = nro;
-    }
-    
     public String getCedula() {
         return cedula;
     }
@@ -52,6 +38,25 @@ public class NodoCliente {
     public void setSiguiente(NodoCliente siguiente) {
         this.siguiente = siguiente;
     }
-        
-       
+
+    // Implementación de Comparable para ordenamiento
+    
+    public int compareTo(NodoCliente otro) {
+        return this.cedula.compareTo(otro.cedula);
+    }
+
+    // Sobrescritura de equals para comparación por cédula
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        NodoCliente that = (NodoCliente) obj;
+        return cedula.equals(that.cedula);
+    }
+    
+    // Sobrescritura de hashCode consistente con equals
+    @Override
+    public int hashCode() {
+        return cedula.hashCode();
+    }
 }

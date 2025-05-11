@@ -1,10 +1,13 @@
 
+// Este Nodo es por el momento para que los eventos tengan una Lista de Entradas
+
 package obligatorio.parte1.Nodos;
 
-public class NodoEntrada {
-    public int nro;
-    public String nombre;
-    public NodoEntrada siguiente; 
+public class NodoEntrada { 
+    public int nro; // sin public no anda 
+    public String nombre; // sin public no anda 
+    public NodoEntrada siguiente;   // sin public no anda 
+    
 // constructor
     public NodoEntrada(int nro, String nombre) {
         this.nro = nro;

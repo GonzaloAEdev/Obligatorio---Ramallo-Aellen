@@ -1,4 +1,3 @@
-
 package obligatorio.parte1.Listas;
 
 import java.time.LocalDate;
@@ -8,6 +7,7 @@ import obligatorio.parte1.Nodos.NodoEvento;
 public class ListaEvento implements IListaEvento {
     NodoEvento primero;
     NodoEvento siguiente;
+
     int cantnodos;
 
 //constructor
@@ -15,7 +15,6 @@ public class ListaEvento implements IListaEvento {
         this.primero = null;
         this.siguiente = null;
         this.cantnodos = 0;
-     
     }
 
 // set get
@@ -34,6 +33,7 @@ public class ListaEvento implements IListaEvento {
 
     public void setUltimo(NodoEvento ultimo) {
         this.siguiente = ultimo;
+
     }
 
     public int getCantnodos() {
@@ -55,6 +55,7 @@ public class ListaEvento implements IListaEvento {
     @Override
     public void agregarInicio(String codigo,String descripcion,int aforo, LocalDate fecha) {
         NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);
+
         if (this.esVacia()){
             this.setPrimero(nuevo);
             this.setUltimo(nuevo);
@@ -140,6 +141,7 @@ public class ListaEvento implements IListaEvento {
 
     @Override
     public void borrarElemento(String codigo) {
+
        if (!this.esVacia()) {
             NodoEvento aux = this.getPrimero();
             boolean borrado = false;
@@ -170,7 +172,8 @@ public class ListaEvento implements IListaEvento {
         return existe;  
 
     }
-
+    
+    /*
     @Override
     public NodoEvento obtenerElemento(String codigo) {
       NodoEvento aux=this.getPrimero();
@@ -182,7 +185,7 @@ public class ListaEvento implements IListaEvento {
             aux=aux.siguiente;
         }
         return existe;  
-    }
+    }*/
 
     @Override
     public void vaciar() {
@@ -190,7 +193,7 @@ public class ListaEvento implements IListaEvento {
                 this.setUltimo(null);
                 this.cantnodos=0;               
     }
-    
+
     @Override
     public void mostrar() {
         NodoEvento aux= this.getPrimero();
@@ -248,6 +251,12 @@ public class ListaEvento implements IListaEvento {
         
     
     }    
+
+    @Override
+    public obligatorio.parte1.NodoEvento obtenerElemento(String codigo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
  
 }
+

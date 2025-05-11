@@ -1,7 +1,8 @@
 package obligatorio.parte1.Interfaces;
 
+
 import java.time.LocalDate;
-import obligatorio.parte1.Nodos.NodoEvento;
+import obligatorio.parte1.NodoEvento;
 
 public interface IListaEvento {
     public boolean esVacia();

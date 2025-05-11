@@ -101,8 +101,6 @@ public class ListaSala implements IListaSala {
         }
     }
 
-
-
     @Override
     public void borrarInicio() {
         if (!this.esVacia()){
@@ -117,6 +115,7 @@ public class ListaSala implements IListaSala {
                         
         }else{
             System.out.println("Lista vacia, no hay salas para borrar");
+
         }
 
     }
@@ -139,6 +138,7 @@ public class ListaSala implements IListaSala {
             }
      }else{
          System.out.println("Lista vacia, no hay salas para borrar");
+
      }       
     }
 
@@ -157,6 +157,7 @@ public class ListaSala implements IListaSala {
             }
         } else {
             System.out.println("Lista vacia, no hay salas para borrar");
+
         }     
 
     }
@@ -167,6 +168,7 @@ public class ListaSala implements IListaSala {
         boolean existe=false;
         while (aux!=null && !existe){
             if (aux.getNombre().compareTo(nombre)==0){
+
                 existe=true;
             }
             aux=aux.siguiente;
@@ -176,6 +178,7 @@ public class ListaSala implements IListaSala {
     }
 
     public boolean buscarelementoPorNom(String nombre) {
+
         NodoSala aux=this.getPrimero();
         boolean existe=false;
         while (aux!=null && !existe){
@@ -211,7 +214,7 @@ public class ListaSala implements IListaSala {
         return ns; 
         
     }
-    
+
     @Override
     public void vaciar() {
                this.setPrimero(null);
@@ -224,6 +227,7 @@ public class ListaSala implements IListaSala {
         NodoSala aux= this.getPrimero();
         while(aux!=null){
             System.out.println("Nombre = "+aux.getNombre()+" - Capacidad= " +aux.getCapacidad());
+
             aux=aux.siguiente;
         }
         System.out.println();
@@ -307,5 +311,4 @@ public class ListaSala implements IListaSala {
         }
         return false;
     }
- 
 }

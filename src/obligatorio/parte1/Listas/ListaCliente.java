@@ -1,9 +1,7 @@
-
 package obligatorio.parte1.Listas;
 
 import obligatorio.parte1.Interfaces.IListaCliente;
 import obligatorio.parte1.Nodos.NodoCliente;
-import obligatorio.parte1.Nodos.NodoEvento;
 
 public class ListaCliente implements IListaCliente {
     NodoCliente primero;
@@ -20,19 +18,19 @@ public class ListaCliente implements IListaCliente {
 
 // set get
 
-    public NodoEvento getPrimero() {
+    public NodoCliente getPrimero() {
         return primero;
     }
 
-    public void setPrimero(NodoEvento primero) {
+    public void setPrimero(NodoCliente primero) {
         this.primero = primero;
     }
 
-    public NodoEvento getUltimo() {
+    public NodoCliente getUltimo() {
         return ultimo;
     }
 
-    public void setUltimo(NodoEvento ultimo) {
+    public void setUltimo(NodoCliente ultimo) {
         this.ultimo = ultimo;
     }
 
@@ -46,15 +44,15 @@ public class ListaCliente implements IListaCliente {
     
     
 // metodos abstractos    
-
     @Override
     public boolean esVacia() {
         return this.cantnodos==0;
        }
 
     @Override
-    public void agregarInicio(int nro, String nombre,int aforo) {
-        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);
+
+    public void agregarInicio(String cedula,String nombre) {
+        NodoCliente nuevo = new NodoCliente(cedula,nombre);
         if (this.esVacia()){
             this.setPrimero(nuevo);
             this.setUltimo(nuevo);
@@ -66,8 +64,9 @@ public class ListaCliente implements IListaCliente {
     }
 
     @Override
-    public void agregarFinal(int nro, String nombre,int aforo) {
-        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);
+
+    public void agregarFinal(String cedula,String nombre) {
+        NodoCliente nuevo = new NodoCliente(cedula,nombre);
         if (this.esVacia()){
             this.setPrimero(nuevo);
             this.setUltimo(nuevo);            
@@ -79,24 +78,24 @@ public class ListaCliente implements IListaCliente {
     }
 
     @Override
-    public void agregarOrd(int nro, String nombre,int aforo) {
-       NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);
-       if (this.esVacia() || nro < this.getPrimero().getNro()){
-           this.agregarInicio(nro, nombre,aforo);
-       }else{
-           if (nro > this.getUltimo().getNro()){
-               this.agregarFinal(nro, nombre,aforo);
-           }else{
-               NodoEvento actual = this.getPrimero();
-               while (actual.siguiente!=null && nro> actual.siguiente.nro){
-                   actual=actual.siguiente;
-               }
-               nuevo.setSiguiente(actual.getSiguiente());
-               actual.setSiguiente(nuevo);
-               this.cantnodos++;
-           }
-       
-       }
+    public void agregarOrd(String cedula,String nombre) {
+       NodoCliente nuevo = new NodoCliente(cedula, nombre);
+    if (this.esVacia() || nuevo.compareTo(this.getPrimero()) < 0) {
+        this.agregarInicio(cedula, nombre);
+    } else {
+        if (nuevo.compareTo(this.getUltimo()) > 0) {
+            this.agregarFinal(cedula, nombre);
+        } else {
+            NodoCliente actual = this.getPrimero();
+            while (actual.siguiente != null && 
+                   nuevo.compareTo(actual.siguiente) > 0) {
+                actual = actual.siguiente;
+            }
+            nuevo.setSiguiente(actual.getSiguiente());
+            actual.setSiguiente(nuevo);
+            this.cantnodos++;
+        }
+    }
     }
 
     @Override
@@ -112,7 +111,7 @@ public class ListaCliente implements IListaCliente {
             }
                         
         }else{
-            System.out.println("no hay elementos en la lista");
+            System.out.println("No hay Clientes en la Lista");
         }
 
     }
@@ -125,7 +124,8 @@ public class ListaCliente implements IListaCliente {
                 this.setUltimo(null);
                 this.cantnodos=0;                        
             }else{
-                 NodoEvento aux= this.getPrimero();
+
+                 NodoCliente aux= this.getPrimero();
                  while (aux.siguiente!=this.getUltimo()){
                      aux=aux.getSiguiente();
                  }
@@ -134,57 +134,44 @@ public class ListaCliente implements IListaCliente {
                  this.cantnodos--;
             }
      }else{
-         System.out.println("no hay elementos en la lista");
+         System.out.println("No hay Clientes en la Lista");
      }       
     }
 
     @Override
-    public void borrarElemento(int nro, String nombre) {
+    public void borrarElemento(String cedula, String nombre) {
        if (!this.esVacia()) {
-            NodoEvento aux = this.getPrimero();
+            NodoCliente aux = this.getPrimero();
             boolean borrado = false;
             while (aux != null && aux.getSiguiente() != null && !borrado) {
-                if (aux.siguiente.getNro() == nro && aux.siguiente.getNombre().compareTo(nombre)==0) {
+                if (aux.siguiente.getCedula().equals(cedula) && 
+                    aux.siguiente.getNombre().compareTo(nombre) == 0) {
                     aux.siguiente = aux.siguiente.siguiente;
                     borrado = true;
+                    this.cantnodos--;
                 }
                 aux = aux.siguiente;
-                this.cantnodos--;
             }
         } else {
             System.out.println("lista vacia, no hay elementos para borrar");
-        }     
-
+        }    
     }
 
     @Override
-    public boolean buscarelemento(int nro, String nombre) {
-      NodoEvento aux=this.getPrimero();
-        boolean existe=false;
-        while (aux!=null && !existe){
-            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){
-                existe=true;
-            }
-            aux=aux.siguiente;
+    public boolean buscarelemento(String cedula, String nombre) {
+    NodoCliente aux = this.getPrimero();
+    NodoCliente buscado = new NodoCliente(cedula, nombre);
+    while (aux != null) {
+        if (aux.equals(buscado) && aux.getNombre().equals(nombre)) {
+            return true;
         }
-        return existe;  
-
+        aux = aux.siguiente;
     }
-    
-    public boolean buscarelementoPorNro(int nro, String nombre) {
-        NodoEvento aux=this.getPrimero();
-        boolean existe=false;
-        while (aux!=null && !existe){
-            if (aux.getNro()==nro){
-                existe=true;
-            }
-            aux=aux.siguiente;
-        }
-        return existe;
-    }
-    
+    return false;
+}
+ 
     public boolean buscarelementoPorNom(int nro, String nombre) {
-        NodoEvento aux=this.getPrimero();
+        NodoCliente aux=this.getPrimero();
         boolean existe=false;
         while (aux!=null && !existe){
             if (aux.getNombre().compareTo(nombre)==0){
@@ -192,21 +179,24 @@ public class ListaCliente implements IListaCliente {
             }
             aux=aux.siguiente;
         }
-        return existe;    }     
+        return existe;    
+    }     
+    
 
     @Override
-    public NodoEvento obtenerElemento(int nro, String nombre) {
-      NodoEvento aux=this.getPrimero();
-        NodoEvento existe=null;
-        while (aux!=null && existe==null){
-            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){
-                existe=aux;
+    public NodoCliente obtenerElemento(String cedula, String nombre) {
+        NodoCliente aux = this.getPrimero();
+        NodoCliente existe = null;
+        while (aux != null && existe == null) {
+            if (aux.getCedula().equals(cedula) && 
+                aux.getNombre().compareTo(nombre) == 0) {
+                existe = aux;
             }
-            aux=aux.siguiente;
+            aux = aux.siguiente;
         }
         return existe;  
     }
-
+         
     @Override
     public void vaciar() {
                this.setPrimero(null);
@@ -216,10 +206,10 @@ public class ListaCliente implements IListaCliente {
 
     @Override
     public void mostrar() {
-        NodoEvento aux= this.getPrimero();
-        while(aux!=null){
-            System.out.println("Nro = "+aux.getNro()+" - Nombre= " +aux.getNombre()+" - Aforo: "+aux.getAforo());
-            aux=aux.siguiente;
+        NodoCliente aux = this.getPrimero();
+        while(aux != null) {
+            System.out.println("Cédula = " + aux.getCedula() + " - Nombre = " + aux.getNombre());
+            aux = aux.siguiente;
         }
         System.out.println();
     }
@@ -231,44 +221,38 @@ public class ListaCliente implements IListaCliente {
 
     @Override
     public void mostrarREC() {
-        System.out.println("mostrar Ascendente");
-        System.out.println(mostrarRecAsc(this.getPrimero(),this.getUltimo()));
+        System.out.println("Mostrar Ascendente");
+        System.out.println(mostrarRecAsc(this.getPrimero(), this.getUltimo()));
   
         System.out.println();
         
-        System.out.println("mostrar Descendente");
-        System.out.println(mostrarRecDsc(this.getPrimero(),this.getUltimo()));  
+        System.out.println("Mostrar Descendente");
+        System.out.println(mostrarRecDsc(this.getPrimero(), this.getUltimo()));  
         
-          System.out.println();      
+        System.out.println();      
     }
     
-    public String mostrarRecAsc(NodoEvento primero,NodoEvento ultimo){
-        if (this.esVacia()){
+    public String mostrarRecAsc(NodoCliente primero, NodoCliente ultimo) {
+        if (this.esVacia()) {
             return " ";
         }
-        if (primero==ultimo){
-            return  ultimo.getNro()+" - "+ ultimo.getNombre();
-        }else{
-        
-            return primero.getNro()+" "+ primero.getNombre()+ " - "+mostrarRecAsc(primero.getSiguiente(),ultimo);
+        if (primero == ultimo) {
+            return ultimo.getCedula() + " - " + ultimo.getNombre();
+        } else {
+            return primero.getCedula() + " " + primero.getNombre() + " - " + 
+                   mostrarRecAsc(primero.getSiguiente(), ultimo);
         }
-        
-    
     }
  
-   public String mostrarRecDsc(NodoEvento primero,NodoEvento ultimo){
-        if (this.esVacia()){
+    public String mostrarRecDsc(NodoCliente primero, NodoCliente ultimo) {
+        if (this.esVacia()) {
             return " ";
         }
-        if (primero==ultimo){
-            return  ultimo.getNro()+" - "+ ultimo.getNombre();
-        }else{
-        
-            return mostrarRecDsc(primero.getSiguiente(),ultimo)+ primero.getNro()+" "+ primero.getNombre()+ " - ";
+        if (primero == ultimo) {
+            return ultimo.getCedula() + " - " + ultimo.getNombre();
+        } else {
+            return mostrarRecDsc(primero.getSiguiente(), ultimo) + 
+                   primero.getCedula() + " " + primero.getNombre() + " - ";
         }
-        
-    
     }    
-    
- 
 }

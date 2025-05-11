@@ -1,4 +1,3 @@
-
 package obligatorio.parte1.Nodos;
 
 import java.time.LocalDate;
@@ -89,5 +88,5 @@ public class NodoEvento {
     public int hashCode() {
         return codigo.hashCode();
     }
-    
+
 }

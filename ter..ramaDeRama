@@ -1,0 +1,1510 @@
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mdeleted file mode 100644[m
+[1mindex 524f0..00000[m
+[1m--- a/.gitignore[m
+[1m+++ /dev/null[m
+[36m@@ -1,24 +0,0 @@[m
+[31m-# Compiled class file[m
+[31m-*.class[m
+[31m-[m
+[31m-# Log file[m
+[31m-*.log[m
+[31m-[m
+[31m-# BlueJ files[m
+[31m-*.ctxt[m
+[31m-[m
+[31m-# Mobile Tools for Java (J2ME)[m
+[31m-.mtj.tmp/[m
+[31m-[m
+[31m-# Package Files #[m
+[31m-*.jar[m
+[31m-*.war[m
+[31m-*.nar[m
+[31m-*.ear[m
+[31m-*.zip[m
+[31m-*.tar.gz[m
+[31m-*.rar[m
+[31m-[m
+[31m-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml[m
+[31m-hs_err_pid*[m
+[31m-replay_pid*[m
+[1mdiff --git a/build/classes/obligatorio/parte1/Interfaces/IListaCliente.class b/build/classes/obligatorio/parte1/Interfaces/IListaCliente.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..09d3b[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Interfaces/IListaCliente.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Interfaces/IListaEntrada.class b/build/classes/obligatorio/parte1/Interfaces/IListaEntrada.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..b3ae9[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Interfaces/IListaEntrada.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Interfaces/IListaEvento.class b/build/classes/obligatorio/parte1/Interfaces/IListaEvento.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..434a0[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Interfaces/IListaEvento.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Interfaces/IListaSala.class b/build/classes/obligatorio/parte1/Interfaces/IListaSala.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..3a365[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Interfaces/IListaSala.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Interfaces/IObligatorio.class b/build/classes/obligatorio/parte1/Interfaces/IObligatorio.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..3bed9[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Interfaces/IObligatorio.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Listas/ListaCliente.class b/build/classes/obligatorio/parte1/Listas/ListaCliente.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..858e9[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Listas/ListaCliente.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Listas/ListaEntrada.class b/build/classes/obligatorio/parte1/Listas/ListaEntrada.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..2a773[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Listas/ListaEntrada.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Listas/ListaEvento.class b/build/classes/obligatorio/parte1/Listas/ListaEvento.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..7cba4[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Listas/ListaEvento.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Listas/ListaSala.class b/build/classes/obligatorio/parte1/Listas/ListaSala.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..72b66[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Listas/ListaSala.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Nodos/NodoCliente.class b/build/classes/obligatorio/parte1/Nodos/NodoCliente.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..06244[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Nodos/NodoCliente.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Nodos/NodoEntrada.class b/build/classes/obligatorio/parte1/Nodos/NodoEntrada.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..7292a[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Nodos/NodoEntrada.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Nodos/NodoEvento.class b/build/classes/obligatorio/parte1/Nodos/NodoEvento.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..c410c[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Nodos/NodoEvento.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Nodos/NodoSala.class b/build/classes/obligatorio/parte1/Nodos/NodoSala.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..10774[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Nodos/NodoSala.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Obligatorio.class b/build/classes/obligatorio/parte1/Obligatorio.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..04984[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Obligatorio.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Prueba$1.class b/build/classes/obligatorio/parte1/Prueba$1.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..0ad82[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Prueba$1.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Prueba.class b/build/classes/obligatorio/parte1/Prueba.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..e89a5[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Prueba.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Retorno$Resultado.class b/build/classes/obligatorio/parte1/Retorno$Resultado.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..056e8[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Retorno$Resultado.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Retorno.class b/build/classes/obligatorio/parte1/Retorno.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..0dced[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Retorno.class differ
+[1mdiff --git a/build/classes/obligatorio/parte1/Sistema.class b/build/classes/obligatorio/parte1/Sistema.class[m
+[1mnew file mode 100644[m
+[1mindex 00000..cddbf[m
+Binary files /dev/null and b/build/classes/obligatorio/parte1/Sistema.class differ
+[1mdiff --git a/nbproject/private/private.properties b/nbproject/private/private.properties[m
+[1mindex 8c403..b108c 100644[m
+[1m--- a/nbproject/private/private.properties[m
+[1m+++ b/nbproject/private/private.properties[m
+[36m@@ -5,4 +5,4 @@[m [mdo.jlink=false[m
+ javac.debug=true[m
+ javadoc.preview=true[m
+ jlink.strip=false[m
+[31m-user.properties.file=C:\\Users\\gonzalo\\AppData\\Roaming\\NetBeans\\25\\build.properties[m
+[32m+[m[32muser.properties.file=C:\\Users\\mathi\\AppData\\Roaming\\NetBeans\\25\\build.properties[m
+[1mdiff --git a/nbproject/private/private.xml b/nbproject/private/private.xml[m
+[1mindex 82015..9075f 100644[m
+[1m--- a/nbproject/private/private.xml[m
+[1m+++ b/nbproject/private/private.xml[m
+[36m@@ -3,14 +3,10 @@[m
+     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>[m
+     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">[m
+         <group>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Listas/ListaEvento.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Listas/ListaSala.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Nodos/NodoEvento.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Sistema.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Nodos/NodoSala.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Nodos/NodoEntrada.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Listas/ListaEntrada.java</file>[m
+[31m-            <file>file:/C:/Users/gonzalo/OneDrive/Documents/ORT/Semestre%203%202025/Algoritmos/Cosas%20Obligatorio/Obligatorio%20-%20Ramallo-Aellen/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Interfaces/IListaEvento.java</file>[m
+[32m+[m[32m            <file>file:/C:/Users/mathi/OneDrive/Documentos/ORT/Algoritmos%20y%20Estructura%20de%20Datos/Obligatorio/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Interfaces/IListaCliente.java</file>[m
+[32m+[m[32m            <file>file:/C:/Users/mathi/OneDrive/Documentos/ORT/Algoritmos%20y%20Estructura%20de%20Datos/Obligatorio/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Nodos/NodoEntrada.java</file>[m
+[32m+[m[32m            <file>file:/C:/Users/mathi/OneDrive/Documentos/ORT/Algoritmos%20y%20Estructura%20de%20Datos/Obligatorio/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Interfaces/IListaEntrada.java</file>[m
+[32m+[m[32m            <file>file:/C:/Users/mathi/OneDrive/Documentos/ORT/Algoritmos%20y%20Estructura%20de%20Datos/Obligatorio/Obligatorio%20-%20Ramallo-Aellen/src/obligatorio/parte1/Listas/ListaEntrada.java</file>[m
+         </group>[m
+     </open-files>[m
+ </project-private>[m
+[1mdiff --git a/src/obligatorio/parte1/Interfaces/IListaCliente.java b/src/obligatorio/parte1/Interfaces/IListaCliente.java[m
+[1mindex 8a696..fe044 100644[m
+[1m--- a/src/obligatorio/parte1/Interfaces/IListaCliente.java[m
+[1m+++ b/src/obligatorio/parte1/Interfaces/IListaCliente.java[m
+[36m@@ -4,17 +4,16 @@[m [mimport obligatorio.parte1.Nodos.NodoCliente;[m
+ [m
+ public interface IListaCliente {[m
+     public boolean esVacia();[m
+[31m-    public void agregarInicio(int nro, String nombre,int aforo);[m
+[31m-    public void agregarFinal(int nro, String nombre,int aforo);[m
+[31m-    public void agregarOrd(int nro, String nombre,int aforo);[m
+[32m+[m[32m    public void agregarInicio(String cedula,String nombre);[m
+[32m+[m[32m    public void agregarFinal(String cedula,String nombre);[m
+[32m+[m[32m    public void agregarOrd(String cedula,String nombre);[m
+     public void borrarInicio();[m
+     public void borrarFin();[m
+[31m-    public void borrarElemento(int nro, String nombre);[m
+[31m-    public boolean buscarelemento(int nro, String nombre);[m
+[31m-    public NodoCliente obtenerElemento(int nro, String nombre); [m
+[32m+[m[32m    public void borrarElemento(String cedula, String nombre);[m
+[32m+[m[32m    public boolean buscarelemento(String cedula, String nombre);[m
+[32m+[m[32m    public NodoCliente obtenerElemento(String cedula, String nombre);[m
+     public void vaciar();[m
+     public void mostrar();[m
+     public int cantElementos();[m
+[31m-    public void mostrarREC();   // mostrar recursivo [m
+[31m-[m
+[32m+[m[32m    public void mostrarREC();   // mostrar recursivo[m[41m    [m
+ }[m
+[1mdiff --git a/src/obligatorio/parte1/Interfaces/IListaEntrada.java b/src/obligatorio/parte1/Interfaces/IListaEntrada.java[m
+[1mindex dac1b..d2472 100644[m
+[1m--- a/src/obligatorio/parte1/Interfaces/IListaEntrada.java[m
+[1m+++ b/src/obligatorio/parte1/Interfaces/IListaEntrada.java[m
+[36m@@ -1,3 +1,4 @@[m
+[32m+[m[32m// Este Interfaces es por el momento para que los eventos tengan una Lista de Entradas[m
+ package obligatorio.parte1.Interfaces;[m
+ [m
+ import obligatorio.parte1.Nodos.NodoEntrada;[m
+[1mdiff --git a/src/obligatorio/parte1/Interfaces/IListaEvento.java b/src/obligatorio/parte1/Interfaces/IListaEvento.java[m
+[1mindex 9d9c2..b1978 100644[m
+[1m--- a/src/obligatorio/parte1/Interfaces/IListaEvento.java[m
+[1m+++ b/src/obligatorio/parte1/Interfaces/IListaEvento.java[m
+[36m@@ -1,18 +1,17 @@[m
+ package obligatorio.parte1.Interfaces;[m
+ [m
+[31m-import java.time.LocalDate;[m
+ import obligatorio.parte1.Nodos.NodoEvento;[m
+ [m
+ public interface IListaEvento {[m
+     public boolean esVacia();[m
+[31m-    public void agregarInicio(String codigo, String descripcion,int aforo, LocalDate fecha);[m
+[31m-    public void agregarFinal(String codigo, String descripcion,int aforo, LocalDate fecha);[m
+[31m-    public void agregarOrd(String codigo, String descripcion,int aforo, LocalDate fecha);[m
+[32m+[m[32m    public void agregarInicio(int nro, String nombre,int aforo);[m
+[32m+[m[32m    public void agregarFinal(int nro, String nombre,int aforo);[m
+[32m+[m[32m    public void agregarOrd(int nro, String nombre,int aforo);[m
+     public void borrarInicio();[m
+     public void borrarFin();[m
+[31m-    public void borrarElemento(String codigo);[m
+[31m-    public boolean buscarelemento(String codigo);[m
+[31m-    public NodoEvento obtenerElemento(String codigo);[m
+[32m+[m[32m    public void borrarElemento(int nro, String nombre);[m
+[32m+[m[32m    public boolean buscarelemento(int nro, String nombre);[m
+[32m+[m[32m    public NodoEvento obtenerElemento(int nro, String nombre);[m
+     public void vaciar();[m
+     public void mostrar();[m
+     public int cantElementos();[m
+[1mdiff --git a/src/obligatorio/parte1/Interfaces/IListaSala.java b/src/obligatorio/parte1/Interfaces/IListaSala.java[m
+[1mindex 635f2..262c9 100644[m
+[1m--- a/src/obligatorio/parte1/Interfaces/IListaSala.java[m
+[1m+++ b/src/obligatorio/parte1/Interfaces/IListaSala.java[m
+[36m@@ -4,14 +4,14 @@[m [mimport obligatorio.parte1.Nodos.NodoSala;[m
+ [m
+ public interface IListaSala {[m
+     public boolean esVacia();[m
+[31m-    public void agregarInicio(String nombre,int capacidad);[m
+[31m-    public void agregarFinal(String nombre,int capacidad);[m
+[31m-    public void agregarOrd(String nombre,int capacidad);[m
+[32m+[m[32m    public void agregarInicio(int nro, String nombre,int capacidad);[m
+[32m+[m[32m    public void agregarFinal(int nro, String nombre,int capacidad);[m
+[32m+[m[32m    public void agregarOrd(int nro, String nombre,int capacidad);[m
+     public void borrarInicio();[m
+     public void borrarFin();[m
+[31m-    public void borrarElemento(String nombre);[m
+[31m-    public boolean buscarelemento(String nombre);[m
+[31m-    public NodoSala obtenerElemento(String nombre);[m
+[32m+[m[32m    public void borrarElemento(int nro, String nombre);[m
+[32m+[m[32m    public boolean buscarelemento(int nro, String nombre);[m
+[32m+[m[32m    public NodoSala obtenerElemento(int nro, String nombre);[m
+     public void vaciar();[m
+     public void mostrar();[m
+     public int cantElementos();[m
+[1mdiff --git a/src/obligatorio/parte1/Listas/ListaCliente.java b/src/obligatorio/parte1/Listas/ListaCliente.java[m
+[1mindex fb6dd..f0a2d 100644[m
+[1m--- a/src/obligatorio/parte1/Listas/ListaCliente.java[m
+[1m+++ b/src/obligatorio/parte1/Listas/ListaCliente.java[m
+[36m@@ -1,9 +1,9 @@[m
+[31m-[m
+ package obligatorio.parte1.Listas;[m
+ [m
+ import obligatorio.parte1.Interfaces.IListaCliente;[m
+ import obligatorio.parte1.Nodos.NodoCliente;[m
+[31m-import obligatorio.parte1.Nodos.NodoEvento;[m
+[32m+[m
+[32m+[m
+ [m
+ public class ListaCliente implements IListaCliente {[m
+     NodoCliente primero;[m
+[36m@@ -20,19 +20,19 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+ [m
+ // set get[m
+ [m
+[31m-    public NodoEvento getPrimero() {[m
+[32m+[m[32m    public NodoCliente getPrimero() {[m
+         return primero;[m
+     }[m
+ [m
+[31m-    public void setPrimero(NodoEvento primero) {[m
+[32m+[m[32m    public void setPrimero(NodoCliente primero) {[m
+         this.primero = primero;[m
+     }[m
+ [m
+[31m-    public NodoEvento getUltimo() {[m
+[32m+[m[32m    public NodoCliente getUltimo() {[m
+         return ultimo;[m
+     }[m
+ [m
+[31m-    public void setUltimo(NodoEvento ultimo) {[m
+[32m+[m[32m    public void setUltimo(NodoCliente ultimo) {[m
+         this.ultimo = ultimo;[m
+     }[m
+ [m
+[36m@@ -47,14 +47,15 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+     [m
+ // metodos abstractos    [m
+ [m
+[32m+[m[41m   [m
+     @Override[m
+     public boolean esVacia() {[m
+         return this.cantnodos==0;[m
+        }[m
+ [m
+     @Override[m
+[31m-    public void agregarInicio(int nro, String nombre,int aforo) {[m
+[31m-        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);[m
+[32m+[m[32m    public void agregarInicio(String cedula,String nombre) {[m
+[32m+[m[32m        NodoCliente nuevo = new NodoCliente(cedula,nombre);[m
+         if (this.esVacia()){[m
+             this.setPrimero(nuevo);[m
+             this.setUltimo(nuevo);[m
+[36m@@ -66,8 +67,8 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+     }[m
+ [m
+     @Override[m
+[31m-    public void agregarFinal(int nro, String nombre,int aforo) {[m
+[31m-        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);[m
+[32m+[m[32m    public void agregarFinal(String cedula,String nombre) {[m
+[32m+[m[32m        NodoCliente nuevo = new NodoCliente(cedula,nombre);[m
+         if (this.esVacia()){[m
+             this.setPrimero(nuevo);[m
+             this.setUltimo(nuevo);            [m
+[36m@@ -79,24 +80,24 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+     }[m
+ [m
+     @Override[m
+[31m-    public void agregarOrd(int nro, String nombre,int aforo) {[m
+[31m-       NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);[m
+[31m-       if (this.esVacia() || nro < this.getPrimero().getNro()){[m
+[31m-           this.agregarInicio(nro, nombre,aforo);[m
+[31m-       }else{[m
+[31m-           if (nro > this.getUltimo().getNro()){[m
+[31m-               this.agregarFinal(nro, nombre,aforo);[m
+[31m-           }else{[m
+[31m-               NodoEvento actual = this.getPrimero();[m
+[31m-               while (actual.siguiente!=null && nro> actual.siguiente.nro){[m
+[31m-                   actual=actual.siguiente;[m
+[31m-               }[m
+[31m-               nuevo.setSiguiente(actual.getSiguiente());[m
+[31m-               actual.setSiguiente(nuevo);[m
+[31m-               this.cantnodos++;[m
+[31m-           }[m
+[31m-       [m
+[31m-       }[m
+[32m+[m[32m    public void agregarOrd(String cedula,String nombre) {[m
+[32m+[m[32m       NodoCliente nuevo = new NodoCliente(cedula, nombre);[m
+[32m+[m[32m    if (this.esVacia() || nuevo.compareTo(this.getPrimero()) < 0) {[m
+[32m+[m[32m        this.agregarInicio(cedula, nombre);[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m        if (nuevo.compareTo(this.getUltimo()) > 0) {[m
+[32m+[m[32m            this.agregarFinal(cedula, nombre);[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m            NodoCliente actual = this.getPrimero();[m
+[32m+[m[32m            while (actual.siguiente != null &&[m[41m [m
+[32m+[m[32m                   nuevo.compareTo(actual.siguiente) > 0) {[m
+[32m+[m[32m                actual = actual.siguiente;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            nuevo.setSiguiente(actual.getSiguiente());[m
+[32m+[m[32m            actual.setSiguiente(nuevo);[m
+[32m+[m[32m            this.cantnodos++;[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+     }[m
+ [m
+     @Override[m
+[36m@@ -112,7 +113,7 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+             }[m
+                         [m
+         }else{[m
+[31m-            System.out.println("no hay elementos en la lista");[m
+[32m+[m[32m            System.out.println("No hay Clientes en la Lista");[m
+         }[m
+ [m
+     }[m
+[36m@@ -125,7 +126,7 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+                 this.setUltimo(null);[m
+                 this.cantnodos=0;                        [m
+             }else{[m
+[31m-                 NodoEvento aux= this.getPrimero();[m
+[32m+[m[32m                 NodoCliente aux= this.getPrimero();[m
+                  while (aux.siguiente!=this.getUltimo()){[m
+                      aux=aux.getSiguiente();[m
+                  }[m
+[36m@@ -134,45 +135,45 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+                  this.cantnodos--;[m
+             }[m
+      }else{[m
+[31m-         System.out.println("no hay elementos en la lista");[m
+[32m+[m[32m         System.out.println("No hay Clientes en la Lista");[m
+      }       [m
+     }[m
+ [m
+     @Override[m
+[31m-    public void borrarElemento(int nro, String nombre) {[m
+[32m+[m[32m    public void borrarElemento(String cedula, String nombre) {[m
+        if (!this.esVacia()) {[m
+[31m-            NodoEvento aux = this.getPrimero();[m
+[32m+[m[32m            NodoCliente aux = this.getPrimero();[m
+             boolean borrado = false;[m
+             while (aux != null && aux.getSiguiente() != null && !borrado) {[m
+[31m-                if (aux.siguiente.getNro() == nro && aux.siguiente.getNombre().compareTo(nombre)==0) {[m
+[32m+[m[32m                if (aux.siguiente.getCedula().equals(cedula) &&[m[41m [m
+[32m+[m[32m                    aux.siguiente.getNombre().compareTo(nombre) == 0) {[m
+                     aux.siguiente = aux.siguiente.siguiente;[m
+                     borrado = true;[m
+[32m+[m[32m                    this.cantnodos--;[m
+                 }[m
+                 aux = aux.siguiente;[m
+[31m-                this.cantnodos--;[m
+             }[m
+         } else {[m
+             System.out.println("lista vacia, no hay elementos para borrar");[m
+[31m-        }     [m
+[32m+[m[32m        }[m[41m    [m
+ [m
+     }[m
+ [m
+     @Override[m
+[31m-    public boolean buscarelemento(int nro, String nombre) {[m
+[31m-      NodoEvento aux=this.getPrimero();[m
+[31m-        boolean existe=false;[m
+[31m-        while (aux!=null && !existe){[m
+[31m-            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){[m
+[31m-                existe=true;[m
+[31m-            }[m
+[31m-            aux=aux.siguiente;[m
+[32m+[m[32m    public boolean buscarelemento(String cedula, String nombre) {[m
+[32m+[m[32m    NodoCliente aux = this.getPrimero();[m
+[32m+[m[32m    NodoCliente buscado = new NodoCliente(cedula, nombre);[m
+[32m+[m[32m    while (aux != null) {[m
+[32m+[m[32m        if (aux.equals(buscado) && aux.getNombre().equals(nombre)) {[m
+[32m+[m[32m            return true;[m
+         }[m
+[31m-        return existe;  [m
+[31m-[m
+[32m+[m[32m        aux = aux.siguiente;[m
+     }[m
+[31m-    [m
+[32m+[m[32m    return false;[m
+[32m+[m[32m}[m
+[32m+[m[32m    /*[m
+     public boolean buscarelementoPorNro(int nro, String nombre) {[m
+[31m-        NodoEvento aux=this.getPrimero();[m
+[32m+[m[32m        NodoCliente aux=this.getPrimero();[m
+         boolean existe=false;[m
+         while (aux!=null && !existe){[m
+             if (aux.getNro()==nro){[m
+[36m@@ -184,7 +185,7 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+     }[m
+     [m
+     public boolean buscarelementoPorNom(int nro, String nombre) {[m
+[31m-        NodoEvento aux=this.getPrimero();[m
+[32m+[m[32m        NodoCliente aux=this.getPrimero();[m
+         boolean existe=false;[m
+         while (aux!=null && !existe){[m
+             if (aux.getNombre().compareTo(nombre)==0){[m
+[36m@@ -193,20 +194,21 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+             aux=aux.siguiente;[m
+         }[m
+         return existe;    }     [m
+[31m-[m
+[32m+[m[32m*/[m
+     @Override[m
+[31m-    public NodoEvento obtenerElemento(int nro, String nombre) {[m
+[31m-      NodoEvento aux=this.getPrimero();[m
+[31m-        NodoEvento existe=null;[m
+[31m-        while (aux!=null && existe==null){[m
+[31m-            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){[m
+[31m-                existe=aux;[m
+[32m+[m[32m    public NodoCliente obtenerElemento(String cedula, String nombre) {[m
+[32m+[m[32m        NodoCliente aux = this.getPrimero();[m
+[32m+[m[32m        NodoCliente existe = null;[m
+[32m+[m[32m        while (aux != null && existe == null) {[m
+[32m+[m[32m            if (aux.getCedula().equals(cedula) &&[m[41m [m
+[32m+[m[32m                aux.getNombre().compareTo(nombre) == 0) {[m
+[32m+[m[32m                existe = aux;[m
+             }[m
+[31m-            aux=aux.siguiente;[m
+[32m+[m[32m            aux = aux.siguiente;[m
+         }[m
+         return existe;  [m
+     }[m
+[31m-[m
+[32m+[m[41m         [m
+     @Override[m
+     public void vaciar() {[m
+                this.setPrimero(null);[m
+[36m@@ -216,10 +218,10 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+ [m
+     @Override[m
+     public void mostrar() {[m
+[31m-        NodoEvento aux= this.getPrimero();[m
+[31m-        while(aux!=null){[m
+[31m-            System.out.println("Nro = "+aux.getNro()+" - Nombre= " +aux.getNombre()+" - Aforo: "+aux.getAforo());[m
+[31m-            aux=aux.siguiente;[m
+[32m+[m[32m        NodoCliente aux = this.getPrimero();[m
+[32m+[m[32m        while(aux != null) {[m
+[32m+[m[32m            System.out.println("Cédula = " + aux.getCedula() + " - Nombre = " + aux.getNombre());[m
+[32m+[m[32m            aux = aux.siguiente;[m
+         }[m
+         System.out.println();[m
+     }[m
+[36m@@ -231,44 +233,39 @@[m [mpublic class ListaCliente implements IListaCliente {[m
+ [m
+     @Override[m
+     public void mostrarREC() {[m
+[31m-        System.out.println("mostrar Ascendente");[m
+[31m-        System.out.println(mostrarRecAsc(this.getPrimero(),this.getUltimo()));[m
+[32m+[m[32m        System.out.println("Mostrar Ascendente");[m
+[32m+[m[32m        System.out.println(mostrarRecAsc(this.getPrimero(), this.getUltimo()));[m
+   [m
+         System.out.println();[m
+         [m
+[31m-        System.out.println("mostrar Descendente");[m
+[31m-        System.out.println(mostrarRecDsc(this.getPrimero(),this.getUltimo()));  [m
+[32m+[m[32m        System.out.println("Mostrar Descendente");[m
+[32m+[m[32m        System.out.println(mostrarRecDsc(this.getPrimero(), this.getUltimo()));[m[41m  [m
+         [m
+[31m-          System.out.println();      [m
+[32m+[m[32m        System.out.println();[m[41m      [m
+     }[m
+     [m
+[31m-    public String mostrarRecAsc(NodoEvento primero,NodoEvento ultimo){[m
+[31m-        if (this.esVacia()){[m
+[32m+[m[32m    public String mostrarRecAsc(NodoCliente primero, NodoCliente ultimo) {[m
+[32m+[m[32m        if (this.esVacia()) {[m
+             return " ";[m
+         }[m
+[31m-        if (primero==ultimo){[m
+[31m-            return  ultimo.getNro()+" - "+ ultimo.getNombre();[m
+[31m-        }else{[m
+[31m-        [m
+[31m-            return primero.getNro()+" "+ primero.getNombre()+ " - "+mostrarRecAsc(primero.getSiguiente(),ultimo);[m
+[32m+[m[32m        if (primero == ultimo) {[m
+[32m+[m[32m            return ultimo.getCedula() + " - " + ultimo.getNombre();[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m            return primero.getCedula() + " " + primero.getNombre() + " - " +[m[41m [m
+[32m+[m[32m                   mostrarRecAsc(primero.getSiguiente(), ultimo);[m
+         }[m
+[31m-        [m
+[31m-    [m
+     }[m
+  [m
+[31m-   public String mostrarRecDsc(NodoEvento primero,NodoEvento ultimo){[m
+[31m-        if (this.esVacia()){[m
+[32m+[m[32m    public String mostrarRecDsc(NodoCliente primero, NodoCliente ultimo) {[m
+[32m+[m[32m        if (this.esVacia()) {[m
+             return " ";[m
+         }[m
+[31m-        if (primero==ultimo){[m
+[31m-            return  ultimo.getNro()+" - "+ ultimo.getNombre();[m
+[31m-        }else{[m
+[31m-        [m
+[31m-            return mostrarRecDsc(primero.getSiguiente(),ultimo)+ primero.getNro()+" "+ primero.getNombre()+ " - ";[m
+[32m+[m[32m        if (primero == ultimo) {[m
+[32m+[m[32m            return ultimo.getCedula() + " - " + ultimo.getNombre();[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m            return mostrarRecDsc(primero.getSiguiente(), ultimo) +[m[41m [m
+[32m+[m[32m                   primero.getCedula() + " " + primero.getNombre() + " - ";[m
+         }[m
+[31m-        [m
+[31m-    [m
+     }    [m
+[31m-    [m
+  [m
+ }[m
+[1mdiff --git a/src/obligatorio/parte1/Listas/ListaEntrada.java b/src/obligatorio/parte1/Listas/ListaEntrada.java[m
+[1mindex 1f96a..3895e 100644[m
+[1m--- a/src/obligatorio/parte1/Listas/ListaEntrada.java[m
+[1m+++ b/src/obligatorio/parte1/Listas/ListaEntrada.java[m
+[36m@@ -1,3 +1,4 @@[m
+[32m+[m[32m// Este Lista es por el momento para que los Eventos tengan una Lista de Entradas[m
+ package obligatorio.parte1.Listas;[m
+ [m
+ import obligatorio.parte1.Interfaces.IListaEntrada;[m
+[36m@@ -193,7 +194,7 @@[m [mpublic class ListaEntrada implements IListaEntrada {[m
+         return existe;[m
+ [m
+     }[m
+[31m-[m
+[32m+[m[32m/*[m
+     public boolean buscarelementoPorNro(int nro, String nombre) {[m
+         NodoEntrada aux = this.getPrimero();[m
+         boolean existe = false;[m
+[36m@@ -217,7 +218,7 @@[m [mpublic class ListaEntrada implements IListaEntrada {[m
+         }[m
+         return existe;[m
+     }[m
+[31m-[m
+[32m+[m[32m*/[m
+     @Override[m
+     public NodoEntrada obtenerElemento(int nro, String nombre) {[m
+         NodoEntrada aux = this.getPrimero();[m
+[1mdiff --git a/src/obligatorio/parte1/Listas/ListaEvento.java b/src/obligatorio/parte1/Listas/ListaEvento.java[m
+[1mindex 2ed54..f2cd7 100644[m
+[1m--- a/src/obligatorio/parte1/Listas/ListaEvento.java[m
+[1m+++ b/src/obligatorio/parte1/Listas/ListaEvento.java[m
+[36m@@ -1,19 +1,17 @@[m
+[31m-[m
+ package obligatorio.parte1.Listas;[m
+ [m
+[31m-import java.time.LocalDate;[m
+ import obligatorio.parte1.Interfaces.IListaEvento;[m
+ import obligatorio.parte1.Nodos.NodoEvento;[m
+ [m
+ public class ListaEvento implements IListaEvento {[m
+     NodoEvento primero;[m
+[31m-    NodoEvento siguiente;[m
+[32m+[m[32m    NodoEvento ultimo;[m
+     int cantnodos;[m
+ [m
+ //constructor[m
+     public ListaEvento() {[m
+         this.primero = null;[m
+[31m-        this.siguiente = null;[m
+[32m+[m[32m        this.ultimo = null;[m
+         this.cantnodos = 0;[m
+      [m
+     }[m
+[36m@@ -29,11 +27,11 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+     }[m
+ [m
+     public NodoEvento getUltimo() {[m
+[31m-        return siguiente;[m
+[32m+[m[32m        return ultimo;[m
+     }[m
+ [m
+     public void setUltimo(NodoEvento ultimo) {[m
+[31m-        this.siguiente = ultimo;[m
+[32m+[m[32m        this.ultimo = ultimo;[m
+     }[m
+ [m
+     public int getCantnodos() {[m
+[36m@@ -53,8 +51,8 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+        }[m
+ [m
+     @Override[m
+[31m-    public void agregarInicio(String codigo,String descripcion,int aforo, LocalDate fecha) {[m
+[31m-        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);[m
+[32m+[m[32m    public void agregarInicio(int nro, String nombre,int aforo) {[m
+[32m+[m[32m        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);[m
+         if (this.esVacia()){[m
+             this.setPrimero(nuevo);[m
+             this.setUltimo(nuevo);[m
+[36m@@ -66,37 +64,37 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+     }[m
+ [m
+     @Override[m
+[31m-    public void agregarFinal(String codigo,String descripcion,int aforo, LocalDate fecha) {[m
+[31m-        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);[m
+[32m+[m[32m    public void agregarFinal(int nro, String nombre,int aforo) {[m
+[32m+[m[32m        NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);[m
+         if (this.esVacia()){[m
+             this.setPrimero(nuevo);[m
+             this.setUltimo(nuevo);            [m
+         }else{[m
+[31m-            this.siguiente.setSiguiente(nuevo);[m
+[31m-            this.siguiente=nuevo;[m
+[32m+[m[32m            this.ultimo.setSiguiente(nuevo);[m
+[32m+[m[32m            this.ultimo=nuevo;[m
+         }[m
+         this.cantnodos++;[m
+     }[m
+ [m
+[31m- @Override[m
+[31m-    public void agregarOrd(String codigo,String descripcion,int aforo, LocalDate fecha) {[m
+[31m-        NodoEvento nuevo = new NodoEvento(codigo,descripcion,aforo,fecha);[m
+[31m-        if (this.esVacia() || codigo.compareTo(this.getPrimero().getCodigo()) < 0) {[m
+[31m-            this.agregarInicio(codigo,descripcion,aforo,fecha);[m
+[31m-        } else {[m
+[31m-            if (codigo.compareTo(this.getUltimo().getCodigo()) > 0) {[m
+[31m-                this.agregarFinal(codigo,descripcion,aforo,fecha);[m
+[31m-            } else {[m
+[31m-                NodoEvento actual = this.getPrimero();[m
+[31m-                while (actual.siguiente != null && [m
+[31m-                       codigo.compareTo(actual.siguiente.getCodigo()) > 0) {[m
+[31m-                    actual = actual.siguiente;[m
+[31m-                }[m
+[31m-                nuevo.setSiguiente(actual.getSiguiente());[m
+[31m-                actual.setSiguiente(nuevo);[m
+[31m-                this.cantnodos++;[m
+[31m-            }[m
+[31m-        }[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public void agregarOrd(int nro, String nombre,int aforo) {[m
+[32m+[m[32m       NodoEvento nuevo = new NodoEvento(nro,nombre,aforo);[m
+[32m+[m[32m       if (this.esVacia() || nro < this.getPrimero().getNro()){[m
+[32m+[m[32m           this.agregarInicio(nro, nombre,aforo);[m
+[32m+[m[32m       }else{[m
+[32m+[m[32m           if (nro > this.getUltimo().getNro()){[m
+[32m+[m[32m               this.agregarFinal(nro, nombre,aforo);[m
+[32m+[m[32m           }else{[m
+[32m+[m[32m               NodoEvento actual = this.getPrimero();[m
+[32m+[m[32m               while (actual.siguiente!=null && nro> actual.siguiente.nro){[m
+[32m+[m[32m                   actual=actual.siguiente;[m
+[32m+[m[32m               }[m
+[32m+[m[32m               nuevo.setSiguiente(actual.getSiguiente());[m
+[32m+[m[32m               actual.setSiguiente(nuevo);[m
+[32m+[m[32m               this.cantnodos++;[m
+[32m+[m[32m           }[m
+[32m+[m[41m       [m
+[32m+[m[32m       }[m
+     }[m
+ [m
+     @Override[m
+[36m@@ -112,7 +110,7 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+             }[m
+                         [m
+         }else{[m
+[31m-            System.out.println("No hay eventos existentes");[m
+[32m+[m[32m            System.out.println("no hay elementos en la lista");[m
+         }[m
+ [m
+     }[m
+[36m@@ -134,17 +132,17 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+                  this.cantnodos--;[m
+             }[m
+      }else{[m
+[31m-         System.out.println("No hay eventos existentes");[m
+[32m+[m[32m         System.out.println("no hay elementos en la lista");[m
+      }       [m
+     }[m
+ [m
+     @Override[m
+[31m-    public void borrarElemento(String codigo) {[m
+[32m+[m[32m    public void borrarElemento(int nro, String nombre) {[m
+        if (!this.esVacia()) {[m
+             NodoEvento aux = this.getPrimero();[m
+             boolean borrado = false;[m
+             while (aux != null && aux.getSiguiente() != null && !borrado) {[m
+[31m-                if (aux.siguiente.getCodigo().compareTo(codigo)==0) {[m
+[32m+[m[32m                if (aux.siguiente.getNro() == nro && aux.siguiente.getNombre().compareTo(nombre)==0) {[m
+                     aux.siguiente = aux.siguiente.siguiente;[m
+                     borrado = true;[m
+                 }[m
+[36m@@ -152,17 +150,17 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+                 this.cantnodos--;[m
+             }[m
+         } else {[m
+[31m-            System.out.println("No hay eventos existentes");[m
+[32m+[m[32m            System.out.println("lista vacia, no hay elementos para borrar");[m
+         }     [m
+ [m
+     }[m
+ [m
+     @Override[m
+[31m-    public boolean buscarelemento(String codigo) {[m
+[32m+[m[32m    public boolean buscarelemento(int nro, String nombre) {[m
+       NodoEvento aux=this.getPrimero();[m
+         boolean existe=false;[m
+         while (aux!=null && !existe){[m
+[31m-            if (aux.getCodigo().compareTo(codigo)==0){[m
+[32m+[m[32m            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){[m
+                 existe=true;[m
+             }[m
+             aux=aux.siguiente;[m
+[36m@@ -170,13 +168,36 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+         return existe;  [m
+ [m
+     }[m
+[31m-[m
+[32m+[m[32m    /*[m
+[32m+[m[32m    public boolean buscarelementoPorNro(int nro, String nombre) {[m
+[32m+[m[32m        NodoEvento aux=this.getPrimero();[m
+[32m+[m[32m        boolean existe=false;[m
+[32m+[m[32m        while (aux!=null && !existe){[m
+[32m+[m[32m            if (aux.getNro()==nro){[m
+[32m+[m[32m                existe=true;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            aux=aux.siguiente;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return existe;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    public boolean buscarelementoPorNom(int nro, String nombre) {[m
+[32m+[m[32m        NodoEvento aux=this.getPrimero();[m
+[32m+[m[32m        boolean existe=false;[m
+[32m+[m[32m        while (aux!=null && !existe){[m
+[32m+[m[32m            if (aux.getNombre().compareTo(nombre)==0){[m
+[32m+[m[32m                existe=true;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            aux=aux.siguiente;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return existe;    }[m[41m     [m
+[32m+[m[32m*/[m
+     @Override[m
+[31m-    public NodoEvento obtenerElemento(String codigo) {[m
+[32m+[m[32m    public NodoEvento obtenerElemento(int nro, String nombre) {[m
+       NodoEvento aux=this.getPrimero();[m
+         NodoEvento existe=null;[m
+         while (aux!=null && existe==null){[m
+[31m-            if (aux.getCodigo().compareTo(codigo)==0){[m
+[32m+[m[32m            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){[m
+                 existe=aux;[m
+             }[m
+             aux=aux.siguiente;[m
+[36m@@ -190,14 +211,12 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+                 this.setUltimo(null);[m
+                 this.cantnodos=0;               [m
+     }[m
+[31m-    [m
+[32m+[m
+     @Override[m
+     public void mostrar() {[m
+         NodoEvento aux= this.getPrimero();[m
+         while(aux!=null){[m
+[31m-            System.out.println(aux.getCodigo()+" - "+aux.getDescripcion()+" - "[m
+[31m-                    +(aux.getAforo() - aux.getLentrada().cantnodos)+" - "[m
+[31m-                    +aux.getLentrada().cantnodos);[m
+[32m+[m[32m            System.out.println("Nro = "+aux.getNro()+" - Nombre= " +aux.getNombre()+" - Aforo: "+aux.getAforo());[m
+             aux=aux.siguiente;[m
+         }[m
+         System.out.println();[m
+[36m@@ -221,29 +240,29 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+           System.out.println();      [m
+     }[m
+     [m
+[31m-    public String mostrarRecAsc(NodoEvento primero,NodoEvento siguiente){[m
+[32m+[m[32m    public String mostrarRecAsc(NodoEvento primero,NodoEvento ultimo){[m
+         if (this.esVacia()){[m
+             return " ";[m
+         }[m
+[31m-        if (primero==siguiente){[m
+[31m-            return  siguiente.getCodigo()+" - "+ siguiente.getDescripcion();[m
+[32m+[m[32m        if (primero==ultimo){[m
+[32m+[m[32m            return  ultimo.getNro()+" - "+ ultimo.getNombre();[m
+         }else{[m
+         [m
+[31m-            return primero.getCodigo()+" "+ primero.getDescripcion()+ " - "+mostrarRecAsc(primero.getSiguiente(),siguiente);[m
+[32m+[m[32m            return primero.getNro()+" "+ primero.getNombre()+ " - "+mostrarRecAsc(primero.getSiguiente(),ultimo);[m
+         }[m
+         [m
+     [m
+     }[m
+  [m
+[31m-   public String mostrarRecDsc(NodoEvento primero,NodoEvento siguiente){[m
+[32m+[m[32m   public String mostrarRecDsc(NodoEvento primero,NodoEvento ultimo){[m
+         if (this.esVacia()){[m
+             return " ";[m
+         }[m
+[31m-        if (primero==siguiente){[m
+[31m-            return  siguiente.getCodigo()+" - "+ siguiente.getDescripcion();[m
+[32m+[m[32m        if (primero==ultimo){[m
+[32m+[m[32m            return  ultimo.getNro()+" - "+ ultimo.getNombre();[m
+         }else{[m
+         [m
+[31m-            return mostrarRecDsc(primero.getSiguiente(),siguiente)+ primero.getCodigo()+" "+ primero.getDescripcion()+ " - ";[m
+[32m+[m[32m            return mostrarRecDsc(primero.getSiguiente(),ultimo)+ primero.getNro()+" "+ primero.getNombre()+ " - ";[m
+         }[m
+         [m
+     [m
+[36m@@ -251,3 +270,4 @@[m [mpublic class ListaEvento implements IListaEvento {[m
+     [m
+  [m
+ }[m
+[41m+[m
+[1mdiff --git a/src/obligatorio/parte1/Listas/ListaSala.java b/src/obligatorio/parte1/Listas/ListaSala.java[m
+[1mindex b8648..66b5f 100644[m
+[1m--- a/src/obligatorio/parte1/Listas/ListaSala.java[m
+[1m+++ b/src/obligatorio/parte1/Listas/ListaSala.java[m
+[36m@@ -1,9 +1,7 @@[m
+ [m
+ package obligatorio.parte1.Listas;[m
+ [m
+[31m-import java.time.LocalDate;[m
+ import obligatorio.parte1.Interfaces.IListaSala;[m
+[31m-import obligatorio.parte1.Nodos.NodoEvento;[m
+ import obligatorio.parte1.Nodos.NodoSala;[m
+ [m
+ [m
+[36m@@ -55,8 +53,8 @@[m [mpublic class ListaSala implements IListaSala {[m
+        }[m
+ [m
+     @Override[m
+[31m-    public void agregarInicio(String nombre,int capacidad) {[m
+[31m-        NodoSala nuevo = new NodoSala(nombre,capacidad);[m
+[32m+[m[32m    public void agregarInicio(int nro, String nombre,int capacidad) {[m
+[32m+[m[32m        NodoSala nuevo = new NodoSala(nro,nombre,capacidad);[m
+         if (this.esVacia()){[m
+             this.setPrimero(nuevo);[m
+             this.setUltimo(nuevo);[m
+[36m@@ -68,8 +66,8 @@[m [mpublic class ListaSala implements IListaSala {[m
+     }[m
+ [m
+     @Override[m
+[31m-    public void agregarFinal(String nombre, int capacidad) {[m
+[31m-        NodoSala nuevo = new NodoSala(nombre,capacidad);[m
+[32m+[m[32m    public void agregarFinal(int nro, String nombre, int capacidad) {[m
+[32m+[m[32m        NodoSala nuevo = new NodoSala(nro,nombre,capacidad);[m
+         if (this.esVacia()){[m
+             this.setPrimero(nuevo);[m
+             this.setUltimo(nuevo);            [m
+[36m@@ -81,28 +79,26 @@[m [mpublic class ListaSala implements IListaSala {[m
+     }[m
+ [m
+     @Override[m
+[31m-    public void agregarOrd(String nombre, int capacidad) {[m
+[31m-        NodoSala nuevo = new NodoSala(nombre, capacidad);[m
+[31m-        if (this.esVacia() || nombre.compareTo(this.getPrimero().getNombre()) < 0) {[m
+[31m-            this.agregarInicio(nombre, capacidad);[m
+[31m-        } else {[m
+[31m-            if (nombre.compareTo(this.getUltimo().getNombre()) > 0) {[m
+[31m-                this.agregarFinal(nombre, capacidad);[m
+[31m-            } else {[m
+[31m-                NodoSala actual = this.getPrimero();[m
+[31m-                while (actual.siguiente != null && [m
+[31m-                       nombre.compareTo(actual.siguiente.getNombre()) > 0) {[m
+[31m-                    actual = actual.siguiente;[m
+[31m-                }[m
+[31m-                nuevo.setSiguiente(actual.getSiguiente());[m
+[31m-                actual.setSiguiente(nuevo);[m
+[31m-                this.cantnodos++;[m
+[31m-            }[m
+[31m-        }[m
+[32m+[m[32m    public void agregarOrd(int nro, String nombre,int capacidad) {[m
+[32m+[m[32m       NodoSala nuevo = new NodoSala(nro,nombre,capacidad);[m
+[32m+[m[32m       if (this.esVacia() || nro < this.getPrimero().getNro()){[m
+[32m+[m[32m           this.agregarInicio(nro, nombre,capacidad);[m
+[32m+[m[32m       }else{[m
+[32m+[m[32m           if (nro > this.getUltimo().getNro()){[m
+[32m+[m[32m               this.agregarFinal(nro, nombre,capacidad);[m
+[32m+[m[32m           }else{[m
+[32m+[m[32m               NodoSala actual = this.getPrimero();[m
+[32m+[m[32m               while (actual.siguiente!=null && nro> actual.siguiente.nro){[m
+[32m+[m[32m                   actual=actual.siguiente;[m
+[32m+[m[32m               }[m
+[32m+[m[32m               nuevo.setSiguiente(actual.getSiguiente());[m
+[32m+[m[32m               actual.setSiguiente(nuevo);[m
+[32m+[m[32m               this.cantnodos++;[m
+[32m+[m[32m           }[m
+[32m+[m[41m       [m
+[32m+[m[32m       }[m
+     }[m
+ [m
+[31m-[m
+[31m-[m
+     @Override[m
+     public void borrarInicio() {[m
+         if (!this.esVacia()){[m
+[36m@@ -116,7 +112,7 @@[m [mpublic class ListaSala implements IListaSala {[m
+             }[m
+                         [m
+         }else{[m
+[31m-            System.out.println("Lista vacia, no hay salas para borrar");[m
+[32m+[m[32m            System.out.println("no hay elementos en la lista");[m
+         }[m
+ [m
+     }[m
+[36m@@ -138,17 +134,17 @@[m [mpublic class ListaSala implements IListaSala {[m
+                  this.cantnodos--;[m
+             }[m
+      }else{[m
+[31m-         System.out.println("Lista vacia, no hay salas para borrar");[m
+[32m+[m[32m         System.out.println("no hay elementos en la lista");[m
+      }       [m
+     }[m
+ [m
+     @Override[m
+[31m-    public void borrarElemento(String nombre) {[m
+[32m+[m[32m    public void borrarElemento(int nro, String nombre) {[m
+        if (!this.esVacia()) {[m
+             NodoSala aux = this.getPrimero();[m
+             boolean borrado = false;[m
+             while (aux != null && aux.getSiguiente() != null && !borrado) {[m
+[31m-                if (aux.siguiente.getNombre().compareTo(nombre)==0) {[m
+[32m+[m[32m                if (aux.siguiente.getNro() == nro && aux.siguiente.getNombre().compareTo(nombre)==0) {[m
+                     aux.siguiente = aux.siguiente.siguiente;[m
+                     borrado = true;[m
+                 }[m
+[36m@@ -156,17 +152,17 @@[m [mpublic class ListaSala implements IListaSala {[m
+                 this.cantnodos--;[m
+             }[m
+         } else {[m
+[31m-            System.out.println("Lista vacia, no hay salas para borrar");[m
+[32m+[m[32m            System.out.println("lista vacia, no hay elementos para borrar");[m
+         }     [m
+ [m
+     }[m
+ [m
+     @Override[m
+[31m-    public boolean buscarelemento(String nombre) {[m
+[32m+[m[32m    public boolean buscarelemento(int nro, String nombre) {[m
+       NodoSala aux=this.getPrimero();[m
+         boolean existe=false;[m
+         while (aux!=null && !existe){[m
+[31m-            if (aux.getNombre().compareTo(nombre)==0){[m
+[32m+[m[32m            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){[m
+                 existe=true;[m
+             }[m
+             aux=aux.siguiente;[m
+[36m@@ -174,8 +170,20 @@[m [mpublic class ListaSala implements IListaSala {[m
+         return existe;  [m
+ [m
+     }[m
+[31m-[m
+[31m-    public boolean buscarelementoPorNom(String nombre) {[m
+[32m+[m[41m    [m
+[32m+[m[32m    public boolean buscarelementoPorNro(int nro, String nombre) {[m
+[32m+[m[32m        NodoSala aux=this.getPrimero();[m
+[32m+[m[32m        boolean existe=false;[m
+[32m+[m[32m        while (aux!=null && !existe){[m
+[32m+[m[32m            if (aux.getNro()==nro){[m
+[32m+[m[32m                existe=true;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            aux=aux.siguiente;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return existe;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    public boolean buscarelementoPorNom(int nro, String nombre) {[m
+         NodoSala aux=this.getPrimero();[m
+         boolean existe=false;[m
+         while (aux!=null && !existe){[m
+[36m@@ -187,11 +195,11 @@[m [mpublic class ListaSala implements IListaSala {[m
+         return existe;    }     [m
+ [m
+     @Override[m
+[31m-    public NodoSala obtenerElemento(String nombre) {[m
+[32m+[m[32m    public NodoSala obtenerElemento(int nro, String nombre) {[m
+       NodoSala aux=this.getPrimero();[m
+         NodoSala existe=null;[m
+         while (aux!=null && existe==null){[m
+[31m-            if (aux.getNombre().compareTo(nombre)==0){[m
+[32m+[m[32m            if (aux.getNro()==nro && aux.getNombre().compareTo(nombre)==0){[m
+                 existe=aux;[m
+             }[m
+             aux=aux.siguiente;[m
+[36m@@ -212,6 +220,8 @@[m [mpublic class ListaSala implements IListaSala {[m
+         [m
+     }[m
+     [m
+[32m+[m[41m    [m
+[32m+[m
+     @Override[m
+     public void vaciar() {[m
+                this.setPrimero(null);[m
+[36m@@ -223,7 +233,7 @@[m [mpublic class ListaSala implements IListaSala {[m
+     public void mostrar() {[m
+         NodoSala aux= this.getPrimero();[m
+         while(aux!=null){[m
+[31m-            System.out.println("Nombre = "+aux.getNombre()+" - Capacidad= " +aux.getCapacidad());[m
+[32m+[m[32m            System.out.println("Nro = "+aux.getNro()+" - Nombre= " +aux.getNombre());[m
+             aux=aux.siguiente;[m
+         }[m
+         System.out.println();[m
+[36m@@ -252,10 +262,10 @@[m [mpublic class ListaSala implements IListaSala {[m
+             return " ";[m
+         }[m
+         if (primero==ultimo){[m
+[31m-            return  ultimo.getNombre()+" - "+ ultimo.getCapacidad();[m
+[32m+[m[32m            return  ultimo.getNro()+" - "+ ultimo.getNombre();[m
+         }else{[m
+         [m
+[31m-            return primero.getNombre()+" "+ primero.getCapacidad()+ " - "+mostrarRecAsc(primero.getSiguiente(),ultimo);[m
+[32m+[m[32m            return primero.getNro()+" "+ primero.getNombre()+ " - "+mostrarRecAsc(primero.getSiguiente(),ultimo);[m
+         }[m
+         [m
+     [m
+[36m@@ -266,46 +276,14 @@[m [mpublic class ListaSala implements IListaSala {[m
+             return " ";[m
+         }[m
+         if (primero==ultimo){[m
+[31m-            return  ultimo.getNombre()+" - "+ ultimo.getCapacidad();[m
+[32m+[m[32m            return  ultimo.getNro()+" - "+ ultimo.getNombre();[m
+         }else{[m
+         [m
+[31m-            return mostrarRecDsc(primero.getSiguiente(),ultimo)+ primero.getNombre()+" "+ primero.getCapacidad()+ " - ";[m
+[32m+[m[32m            return mostrarRecDsc(primero.getSiguiente(),ultimo)+ primero.getNro()+" "+ primero.getNombre()+ " - ";[m
+         }[m
+         [m
+     [m
+     }    [m
+[31m-   // Método auxiliar para encontrar sala disponible[m
+[31m-    public NodoSala encontrarSalaDisponible(int aforoNecesario, LocalDate fecha,String codigo) {[m
+[31m-        NodoSala actual = this.getPrimero();[m
+[31m-        NodoSala mejorSala = null;[m
+     [m
+[31m-         while (actual != null) {[m
+[31m-        // Verificar si la sala cumple con el aforo y no tiene eventos en esa fecha[m
+[31m-            if (actual.getCapacidad() >= aforoNecesario && [m
+[31m-                !tieneEventoEnFecha(actual, fecha,codigo)) {[m
+[31m-            [m
+[31m-            // Seleccionar la sala con capacidad más ajustada al aforo necesario[m
+[31m-                if (mejorSala == null || [m
+[31m-                actual.getCapacidad() < mejorSala.getCapacidad()) {[m
+[31m-                mejorSala = actual;[m
+[31m-                }[m
+[31m-            }[m
+[31m-            actual = actual.getSiguiente();[m
+[31m-        }[m
+[31m-    [m
+[31m-        return mejorSala;[m
+[31m-    }[m
+[31m-[m
+[31m-// Método auxiliar para verificar si una sala tiene eventos en una fecha específica[m
+[31m-    private boolean tieneEventoEnFecha(NodoSala sala, LocalDate fecha,String codigo) {[m
+[31m-        NodoEvento eventoActual = sala.getLevento().obtenerElemento(codigo);[m
+[31m-        while (eventoActual != null) {[m
+[31m-            if (eventoActual.getFecha() == fecha) {[m
+[31m-                return true;[m
+[31m-            }[m
+[31m-            eventoActual = eventoActual.getSiguiente();[m
+[31m-        }[m
+[31m-        return false;[m
+[31m-    }[m
+  [m
+ }[m
+[1mdiff --git a/src/obligatorio/parte1/Nodos/NodoCliente.java b/src/obligatorio/parte1/Nodos/NodoCliente.java[m
+[1mindex 1ce4c..1415d 100644[m
+[1m--- a/src/obligatorio/parte1/Nodos/NodoCliente.java[m
+[1m+++ b/src/obligatorio/parte1/Nodos/NodoCliente.java[m
+[36m@@ -1,34 +1,21 @@[m
+[31m-[m
+ package obligatorio.parte1.Nodos;[m
+ [m
+ public class NodoCliente {[m
+[31m-    public int  nro;[m
+[31m-    public String cedula;[m
+[31m-    public String nombre;[m
+[31m-    public NodoCliente siguiente;[m
+[31m-    [m
+[31m-    // (ListaEntrada lentrada;) No se si incluir la lista de entradas que tiene comrpadas [m
+[31m-        [m
+[32m+[m[32m    String cedula;[m
+[32m+[m[32m    String nombre;[m
+[32m+[m[32m    public NodoCliente siguiente; // esta puublico para que ande[m[41m [m
+[32m+[m[41m           [m
+ // constructor[m
+[31m-    public NodoCliente(int  nro, String cedula, String nombre, NodoCliente siguiente) {[m
+[31m-        this.nro = nro;[m
+[32m+[m[41m    [m
+[32m+[m[32m    public NodoCliente(String cedula, String nombre) {[m
+         this.cedula = cedula;[m
+         this.nombre = nombre;[m
+[31m-        this.siguiente = siguiente;[m
+[32m+[m[32m        this.siguiente = null;[m
+         [m
+     }[m
+ [m
+[31m-    [m
+[31m-[m
+ // set y get[m
+[31m-    public int getNro() {[m
+[31m-        return nro;[m
+[31m-    }[m
+[31m-[m
+[31m-    public void setNro(int nro) {[m
+[31m-        this.nro = nro;[m
+[31m-    }[m
+[31m-    [m
+[32m+[m[41m       [m
+     public String getCedula() {[m
+         return cedula;[m
+     }[m
+[36m@@ -52,6 +39,25 @@[m [mpublic class NodoCliente {[m
+     public void setSiguiente(NodoCliente siguiente) {[m
+         this.siguiente = siguiente;[m
+     }[m
+[31m-        [m
+[31m-       [m
+[32m+[m
+[32m+[m[32m    // Implementación de Comparable para ordenamiento[m
+[32m+[m[41m    [m
+[32m+[m[32m    public int compareTo(NodoCliente otro) {[m
+[32m+[m[32m        return this.cedula.compareTo(otro.cedula);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    // Sobrescritura de equals para comparación por cédula[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public boolean equals(Object obj) {[m
+[32m+[m[32m        if (this == obj) return true;[m
+[32m+[m[32m        if (obj == null || getClass() != obj.getClass()) return false;[m
+[32m+[m[32m        NodoCliente that = (NodoCliente) obj;[m
+[32m+[m[32m        return cedula.equals(that.cedula);[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Sobrescritura de hashCode consistente con equals[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public int hashCode() {[m
+[32m+[m[32m        return cedula.hashCode();[m
+[32m+[m[32m    }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/obligatorio/parte1/Nodos/NodoEntrada.java b/src/obligatorio/parte1/Nodos/NodoEntrada.java[m
+[1mindex b9597..7c7cd 100644[m
+[1m--- a/src/obligatorio/parte1/Nodos/NodoEntrada.java[m
+[1m+++ b/src/obligatorio/parte1/Nodos/NodoEntrada.java[m
+[36m@@ -1,10 +1,11 @@[m
+[32m+[m[32m// Este Nodo es por el momento para que los eventos tengan una Lista de Entradas[m
+ [m
+ package obligatorio.parte1.Nodos;[m
+ [m
+ public class NodoEntrada {[m
+[31m-    public int nro;[m
+[31m-    public String nombre;[m
+[31m-    public NodoEntrada siguiente; [m
+[32m+[m[32m    public int nro; // sin public no anda[m[41m [m
+[32m+[m[32m    public String nombre; // sin public no anda[m[41m [m
+[32m+[m[32m    public NodoEntrada siguiente;   // sin public no anda[m[41m [m
+ // constructor[m
+     public NodoEntrada(int nro, String nombre) {[m
+         this.nro = nro;[m
+[1mdiff --git a/src/obligatorio/parte1/Nodos/NodoEvento.java b/src/obligatorio/parte1/Nodos/NodoEvento.java[m
+[1mindex c9061..b32ee 100644[m
+[1m--- a/src/obligatorio/parte1/Nodos/NodoEvento.java[m
+[1m+++ b/src/obligatorio/parte1/Nodos/NodoEvento.java[m
+[36m@@ -1,51 +1,39 @@[m
+[31m-[m
+ package obligatorio.parte1.Nodos;[m
+ [m
+[31m-import java.time.LocalDate;[m
+ import obligatorio.parte1.Listas.ListaEntrada;[m
+ [m
+ public class NodoEvento {[m
+[31m-    public String codigo;[m
+[31m-    public String descripcion;[m
+[31m-    public int aforo;[m
+[32m+[m[32m    int nro;[m
+[32m+[m[32m    String nombre;[m
+[32m+[m[32m    int aforo;[m
+     public NodoEvento siguiente;[m
+[31m-    public ListaEntrada lentrada;[m
+[31m-    public LocalDate fecha;[m
+[32m+[m[32m    ListaEntrada lentrada;[m
+     [m
+ // constructor[m
+[31m-    public NodoEvento(String codigo, String descripcion,int aforo, LocalDate fecha) {[m
+[31m-        this.codigo = codigo;[m
+[31m-        this.descripcion = descripcion;[m
+[31m-        this.aforo= aforo;[m
+[31m-        this.fecha= fecha;[m
+[32m+[m[32m    public NodoEvento(int nro, String nombre,int aforo) {[m
+[32m+[m[32m        this.nro = nro;[m
+[32m+[m[32m        this.nombre = nombre;[m
+[32m+[m[32m        this.aforo=aforo;[m
+         this.siguiente = null;[m
+[31m-        this.lentrada= new ListaEntrada(aforo);[m
+[32m+[m[32m        this.lentrada=new ListaEntrada(aforo);[m
+     }[m
+ [m
+ // set y get[m
+ [m
+[31m-     public String getCodigo() {[m
+[31m-        return codigo;[m
+[31m-    }[m
+[31m-[m
+[31m-    public void setCodigo(String codigo) {[m
+[31m-        this.codigo = codigo;[m
+[31m-    }[m
+[31m-[m
+[31m-    public String getDescripcion() {[m
+[31m-        return descripcion;[m
+[32m+[m[32m    public int getNro() {[m
+[32m+[m[32m        return nro;[m
+     }[m
+ [m
+[31m-    public void setDescripcion(String descripcion) {[m
+[31m-        this.descripcion = descripcion;[m
+[32m+[m[32m    public void setNro(int nro) {[m
+[32m+[m[32m        this.nro = nro;[m
+     }[m
+ [m
+[31m-    public LocalDate getFecha() {[m
+[31m-        return fecha;[m
+[32m+[m[32m    public String getNombre() {[m
+[32m+[m[32m        return nombre;[m
+     }[m
+ [m
+[31m-    public void setFecha(LocalDate fecha) {[m
+[31m-        this.fecha = fecha;[m
+[32m+[m[32m    public void setNombre(String nombre) {[m
+[32m+[m[32m        this.nombre = nombre;[m
+     }[m
+ [m
+     public NodoEvento getSiguiente() {[m
+[36m@@ -71,23 +59,5 @@[m [mpublic class NodoEvento {[m
+     public void setLentrada(ListaEntrada lentrada) {[m
+         this.lentrada = lentrada;[m
+     }[m
+[31m-    public int compareTo(NodoEvento otro) {[m
+[31m-        return this.codigo.compareTo(otro.codigo);[m
+[31m-    }[m
+[31m-[m
+[31m-    // Sobrescritura de equals para comparación por cédula[m
+[31m-    @Override[m
+[31m-    public boolean equals(Object obj) {[m
+[31m-        if (this == obj) return true;[m
+[31m-        if (obj == null || getClass() != obj.getClass()) return false;[m
+[31m-        NodoEvento that = (NodoEvento) obj;[m
+[31m-        return codigo.equals(that.codigo);[m
+[31m-    }[m
+ [m
+[31m-    // Sobrescritura de hashCode consistente con equals[m
+[31m-    @Override[m
+[31m-    public int hashCode() {[m
+[31m-        return codigo.hashCode();[m
+[31m-    }[m
+[31m-    [m
+ }[m
+[1mdiff --git a/src/obligatorio/parte1/Nodos/NodoSala.java b/src/obligatorio/parte1/Nodos/NodoSala.java[m
+[1mindex 09fa3..e64f3 100644[m
+[1m--- a/src/obligatorio/parte1/Nodos/NodoSala.java[m
+[1m+++ b/src/obligatorio/parte1/Nodos/NodoSala.java[m
+[36m@@ -1,18 +1,18 @@[m
+[31m-[m
+ package obligatorio.parte1.Nodos;[m
+ [m
+ import obligatorio.parte1.Listas.ListaEvento;[m
+ [m
+ public class NodoSala {[m
+[31m-[m
+[31m-    public String nombre;[m
+[31m-    public NodoSala siguiente; [m
+[31m-    public int capacidad;[m
+[31m-    public ListaEvento levento;[m
+[32m+[m[32m    int nro;[m
+[32m+[m[32m    String nombre;[m
+[32m+[m[32m    NodoSala siguiente;[m[41m [m
+[32m+[m[32m    int capacidad;[m
+[32m+[m[32m    ListaEvento levento;[m
+     [m
+ // constructor[m
+     [m
+[31m-    public NodoSala(String nombre,int capacidad) {[m
+[32m+[m[32m    public NodoSala(int nro, String nombre,int capacidad) {[m
+[32m+[m[32m        this.nro = nro;[m
+         this.nombre = nombre;[m
+         this.capacidad=capacidad;[m
+         this.siguiente = null;[m
+[36m@@ -21,6 +21,14 @@[m [mpublic class NodoSala {[m
+ [m
+ // set y get[m
+ [m
+[32m+[m[32m    public int getNro() {[m
+[32m+[m[32m        return nro;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public void setNro(int nro) {[m
+[32m+[m[32m        this.nro = nro;[m
+[32m+[m[32m    }[m
+[32m+[m
+     public String getNombre() {[m
+         return nombre;[m
+     }[m
+[36m@@ -52,24 +60,5 @@[m [mpublic class NodoSala {[m
+     public void setCapacidad(int capacidad) {[m
+         this.capacidad = capacidad;[m
+     }[m
+[31m-    // Implementación de Comparable para ordenamiento[m
+     [m
+[31m-    public int compareTo(NodoSala otro) {[m
+[31m-        return this.nombre.compareTo(otro.nombre);[m
+[31m-    }[m
+[31m-[m
+[31m-    // Sobrescritura de equals para comparación por cédula[m
+[31m-    @Override[m
+[31m-    public boolean equals(Object obj) {[m
+[31m-        if (this == obj) return true;[m
+[31m-        if (obj == null || getClass() != obj.getClass()) return false;[m
+[31m-        NodoSala that = (NodoSala) obj;[m
+[31m-        return nombre.equals(that.nombre);[m
+[31m-    }[m
+[31m-[m
+[31m-    // Sobrescritura de hashCode consistente con equals[m
+[31m-    @Override[m
+[31m-    public int hashCode() {[m
+[31m-        return nombre.hashCode();[m
+[31m-    }[m
+ }[m
+[1mdiff --git a/src/obligatorio/parte1/Retorno.java b/src/obligatorio/parte1/Retorno.java[m
+[1mindex f4611..c70fd 100644[m
+[1m--- a/src/obligatorio/parte1/Retorno.java[m
+[1m+++ b/src/obligatorio/parte1/Retorno.java[m
+[36m@@ -30,26 +30,6 @@[m [mpublic class Retorno {[m
+         return new Retorno(Resultado.OK, valorString);[m
+     }[m
+ [m
+[31m-    public static Retorno error1ConMensaje(String menssage) {[m
+[31m-        return new Retorno(Resultado.ERROR_1, menssage);[m
+[31m-    }[m
+[31m-[m
+[31m-    public static Retorno error2ConMensaje(String menssage) {[m
+[31m-        return new Retorno(Resultado.ERROR_2, menssage);[m
+[31m-    }[m
+[31m-[m
+[31m-    public static Retorno error3ConMensaje(String menssage) {[m
+[31m-        return new Retorno(Resultado.ERROR_3, menssage);[m
+[31m-    }[m
+[31m-[m
+[31m-    public static Retorno error4ConMensaje(String menssage) {[m
+[31m-        return new Retorno(Resultado.ERROR_4, menssage);[m
+[31m-    }[m
+[31m-[m
+[31m-    public static Retorno error5ConMensaje(String menssage) {[m
+[31m-        return new Retorno(Resultado.ERROR_5, menssage);[m
+[31m-    }[m
+[31m-    [m
+     public static Retorno error1() {[m
+         return new Retorno(Resultado.ERROR_1);[m
+     }[m
+[1mdiff --git a/src/obligatorio/parte1/Sistema.java b/src/obligatorio/parte1/Sistema.java[m
+[1mindex f9da5..230c2 100644[m
+[1m--- a/src/obligatorio/parte1/Sistema.java[m
+[1m+++ b/src/obligatorio/parte1/Sistema.java[m
+[36m@@ -3,6 +3,7 @@[m [mpackage obligatorio.parte1;[m
+ import obligatorio.parte1.Nodos.NodoSala;[m
+ import obligatorio.parte1.Listas.ListaSala;[m
+ import obligatorio.parte1.Listas.ListaCliente;[m
+[32m+[m[32mimport obligatorio.parte1.Listas.ListaEvento;[m
+ import obligatorio.parte1.Interfaces.IObligatorio;[m
+ import java.time.LocalDate;[m
+ [m
+[36m@@ -10,75 +11,85 @@[m [mpublic class Sistema implements IObligatorio {[m
+     [m
+     ListaSala ls;[m
+     ListaCliente lc;[m
+[32m+[m[32m    ListaEvento le;[m
+[32m+[m[41m    [m
+     @Override[m
+[31m-    // 1.1[m
+     public Retorno crearSistemaDeGestion() {     [m
+          ls= new ListaSala();[m
+          lc= new ListaCliente();[m
+[31m-        return Retorno.ok("Sistema creado con exito");[m
+[32m+[m[41m        [m
+[32m+[m[32m        return Retorno.ok();[m
+     }[m
+ [m
+[31m-    // 1.2[m
+     @Override[m
+     public Retorno registrarSala(String nombre, int capacidad) {[m
+[31m-        if(ls.buscarelementoPorNom(nombre)){[m
+[31m-            return new Retorno(Retorno.Resultado.ERROR_1); // Ya existe sala con este nombre[m
+[31m-        }else if(capacidad <= 0){[m
+[31m-            return new Retorno(Retorno.Resultado.ERROR_2); // La capacidad es <= 0[m
+[31m-        }else{[m
+[31m-            ls.agregarOrd(nombre, capacidad);    [m
+[31m-            return Retorno.ok();[m
+[31m-        }     [m
+[32m+[m[32m        ls.agregarOrd(0, nombre, capacidad);[m
+[32m+[m[32m        return Retorno.noImplementada();[m
+     }[m
+ [m
+[31m-    // 1.3    [m
+     @Override[m
+     public Retorno eliminarSala(String nombre) {[m
+[31m-        if(ls.buscarelementoPorNom(nombre)){[m
+[31m-            return new Retorno(Retorno.Resultado.ERROR_1); // Ya existe sala con este nombre[m
+[31m-        }else{[m
+[31m-            ls.borrarElemento(nombre);[m
+[31m-            return Retorno.ok("Si pudo eliminar la sala");[m
+[31m-        }[m
+[32m+[m[32m        return Retorno.noImplementada();[m
+     }[m
+ [m
+[31m-    // 1.4[m
+     @Override[m
+     public Retorno registrarEvento(String codigo, String descripcion, int aforoNecesario, LocalDate fecha) {[m
+[31m-        NodoSala nsdisponible= ls.encontrarSalaDisponible(aforoNecesario, fecha, codigo);[m
+[31m-        if(ls.getPrimero().getLevento().buscarelemento(codigo)){[m
+[31m-            return new Retorno(Retorno.Resultado.ERROR_1); // ya existe un evento con este codigo[m
+[31m-        }else if(aforoNecesario <= 0){[m
+[31m-            return new Retorno(Retorno.Resultado.ERROR_2); // Aforo es necesario[m
+[31m-        }else if (nsdisponible ==null){[m
+[31m-            return new Retorno(Retorno.Resultado.ERROR_3); // No hay salas disponibles para esta fecha con aforo suficiente[m
+[32m+[m[32m        NodoSala nsdisponible= ls.obtenerElementoSegunAforo(aforoNecesario);[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (nsdisponible!=null){[m
+[32m+[m[32m            System.out.println("Encontre una sala " + nsdisponible.getNombre()+" capacidad "+ nsdisponible.getCapacidad()+ " Para el aforo " +aforoNecesario);[m
+[32m+[m[32m            nsdisponible.getLevento().agregarOrd(Integer.parseInt(codigo), descripcion, aforoNecesario);[m
+[32m+[m[41m       [m
+[32m+[m[41m        [m
+[32m+[m[41m        [m
+         }else{[m
+[31m-            System.out.println("Encontre una sala " + nsdisponible.getNombre()+" capacidad "[m
+[31m-                    + nsdisponible.getCapacidad()+ " Para el aforo " +aforoNecesario+" Para la fecha "+fecha);[m
+[31m-            nsdisponible.getLevento().agregarOrd(codigo,descripcion,aforoNecesario,fecha);[m
+[31m-            return Retorno.ok();[m
+[32m+[m[32m            System.out.println("No hay Sala para ese aforo "+ aforoNecesario);[m
+         }[m
+[32m+[m[41m        [m
+[32m+[m[32m        return Retorno.noImplementada();[m
+     }[m
+ [m
+     @Override[m
+     public Retorno registrarCliente(String cedula, String nombre) {[m
+[31m-        return Retorno.noImplementada();[m
+[32m+[m[32m        // Validación de parámetros[m
+[32m+[m[32m        if (cedula == null || cedula.isEmpty()) {[m
+[32m+[m[32m            return Retorno.error1();[m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (cedula.length() < 8) {[m
+[32m+[m[32m            return Retorno.error2();[m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (nombre == null || nombre.isEmpty()) {[m
+[32m+[m[32m            return Retorno.error3();[m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m        // Verificar si el cliente ya existe[m
+[32m+[m[32m        if (lc.buscarelemento(cedula, nombre)) {[m
+[32m+[m[32m            return Retorno.error4();[m[41m [m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m        // Registrar el nuevo cliente[m
+[32m+[m[32m        lc.agregarOrd(cedula, nombre);[m
+[32m+[m[32m        return Retorno.ok("Cliente registrado exitosamente");[m
+     }[m
+ [m
+     @Override[m
+     public Retorno listarSalas() {[m
+        ls.mostrar();[m
+[31m-        return Retorno.noImplementada();[m
+[32m+[m[32m        return Retorno.ok();[m
+     }[m
+ [m
+     @Override[m
+     public Retorno listarEventos() {[m
+[31m-        return Retorno.noImplementada();[m
+[32m+[m[32m        le.mostrar();[m
+[32m+[m[32m        return Retorno.ok();[m
+     }[m
+ [m
+     @Override[m
+     public Retorno listarClientes() {[m
+[31m-        return Retorno.noImplementada();[m
+[32m+[m[32m        lc.mostrar();[m
+[32m+[m[32m        return Retorno.ok();[m
+     }[m
+ [m
+     @Override[m

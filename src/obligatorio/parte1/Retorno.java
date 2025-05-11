@@ -49,7 +49,6 @@ public class Retorno {
     public static Retorno error5ConMensaje(String menssage) {
         return new Retorno(Resultado.ERROR_5, menssage);
     }
-    
     public static Retorno error1() {
         return new Retorno(Resultado.ERROR_1);
     }
