@@ -4,9 +4,9 @@
 package Nodos;
 
 public class NodoEntrada { 
-    int nro; // sin public no anda 
-    String nombre; // sin public no anda 
-    NodoEntrada siguiente;   // sin public no anda 
+    public int nro; // sin public no anda 
+    public String nombre; // sin public no anda 
+    public NodoEntrada siguiente;   // sin public no anda 
     
 // constructor
     public NodoEntrada(int nro, String nombre) {

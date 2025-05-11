@@ -2,6 +2,7 @@ package SistemaAutogestion;
 
 import Interfaces.IObligatorio;
 import java.time.LocalDate;
+import java.time.Month;
 
 
 public class Obligatorio {
@@ -21,30 +22,34 @@ public static void juegoPruebas(Prueba p, IObligatorio s) {
         p.ver(s.crearSistemaDeGestion().resultado, Retorno.Resultado.OK, "Sistema inicializado correctamente");
 
         // 1.2 - Registrar salas
-        p.ver(s.registrarSala("Sala Verde", 45).resultado, Retorno.Resultado.OK, "Registrar sala Verde");
-        p.ver(s.registrarSala("Sala Verde", 30).resultado, Retorno.Resultado.ERROR_1, "Sala ya existente");
-        p.ver(s.registrarSala("Sala Roja", -5).resultado, Retorno.Resultado.ERROR_2, "Capacidad negativa");
+        p.ver(s.registrarSala("Sala A", 45).resultado, Retorno.Resultado.OK, "Registrar sala A");
+        p.ver(s.registrarSala("Sala A", 30).resultado, Retorno.Resultado.ERROR_1, "Ya existe una sala conese nombre");
+        p.ver(s.registrarSala("Sala X", -5).resultado, Retorno.Resultado.ERROR_2, "Capacidad negativa");
         
             
-        p.ver(s.registrarSala("Sala Naranja", 40).resultado, Retorno.Resultado.OK, "Registrar sala Naranja");
-        p.ver(s.registrarSala("Sala Blanca", 60).resultado, Retorno.Resultado.OK, "Registrar Sala Blanca");
-        p.ver(s.registrarSala("Sala Negra", 70).resultado, Retorno.Resultado.OK, "Registrar Sala Negra");
-        p.ver(s.registrarSala("Sala Gris", 40).resultado, Retorno.Resultado.OK, "Registrar Sala Gris");
+        p.ver(s.registrarSala("Sala C", 40).resultado, Retorno.Resultado.OK, "Registrar sala C");
+        p.ver(s.registrarSala("Sala D", 60).resultado, Retorno.Resultado.OK, "Registrar Sala D");
+        p.ver(s.registrarSala("Sala E", 70).resultado, Retorno.Resultado.OK, "Registrar Sala E");
+        p.ver(s.registrarSala("Sala C", 60).resultado, Retorno.Resultado.ERROR_1, "Ya existe una sala conese nombre");
 
         // Mostrar salas
         p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas luego de registros");
 
         // 1.3 - Eliminar sala
-        p.ver(s.eliminarSala("Sala Roja").resultado, Retorno.Resultado.ERROR_1, "Eliminar sala no registrada");
-        p.ver(s.eliminarSala("Sala Verde").resultado, Retorno.Resultado.OK, "Eliminar sala Verde");
+        p.ver(s.eliminarSala("Sala X").resultado, Retorno.Resultado.ERROR_1, "Eliminar sala no registrada");
+        p.ver(s.eliminarSala("Sala D").resultado, Retorno.Resultado.OK, "Eliminar sala Verde");
 
         // Mostrar salas despues de eliminar
         p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas luego de eliminaciones");
 
         // 1.4 - Registrar eventos
-        p.ver(s.registrarSala("Sala Azul", 50).resultado, Retorno.Resultado.OK, "Registrar sala Azul");
+            LocalDate fecha = LocalDate.of(2025, 6, 10);
         
-        LocalDate fecha = LocalDate.of(2025, 6, 10);
+        p.ver(s.registrarEvento("XLR8B10","Concierto Duki", 100, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "No se encontro una sala para ese aforo en ese día");
+        p.ver(s.registrarEvento("BBCITA1","Orquesta Nacional", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
+        p.ver(s.registrarEvento("3ICKKCK","Orquesta Juvenil", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
+        p.ver(s.registrarEvento("123ABCD","Concierto Duki", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
+        
         
         
         p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.OK, "Registrar evento valido");
