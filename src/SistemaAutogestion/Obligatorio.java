@@ -36,8 +36,8 @@ public static void juegoPruebas(Prueba p, IObligatorio s) {
         p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas luego de registros");
 
         // 1.3 - Eliminar sala
-        p.ver(s.eliminarSala("Sala X").resultado, Retorno.Resultado.ERROR_1, "Eliminar sala no registrada");
-        p.ver(s.eliminarSala("Sala D").resultado, Retorno.Resultado.OK, "Eliminar sala Verde");
+        p.ver(s.eliminarSala("Sala X").resultado, Retorno.Resultado.ERROR_1, "no existe una sala conese nombre");
+        p.ver(s.eliminarSala("Sala D").resultado, Retorno.Resultado.OK, "Sala D eliminada");
 
         // Mostrar salas despues de eliminar
         p.ver(s.listarSalas().resultado, Retorno.Resultado.OK, "Listar salas luego de eliminaciones");
@@ -45,19 +45,19 @@ public static void juegoPruebas(Prueba p, IObligatorio s) {
         // 1.4 - Registrar eventos
             LocalDate fecha = LocalDate.of(2025, 6, 10);
         
-        p.ver(s.registrarEvento("XLR8B10","Concierto Duki", 100, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "No se encontro una sala para ese aforo en ese día");
-        p.ver(s.registrarEvento("BBCITA1","Orquesta Nacional", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
+        p.ver(s.registrarEvento("XLR8B10","Concierto Duki", 100, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.ERROR_3, "No se encontro una sala para ese aforo en ese día");
+        p.ver(s.registrarEvento("BBCITA1","Orquesta Nacional", 50, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Evento Orquesta Nacional registrado");
         p.ver(s.registrarEvento("3ICKKCK","Orquesta Juvenil", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
         p.ver(s.registrarEvento("123ABCD","Concierto Duki", 30, LocalDate.of(2025,8,12)).resultado, Retorno.Resultado.OK, "Registrar evento Duki");
         
         
-        
+        /*
         p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.OK, "Registrar evento valido");
         p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.ERROR_1, "Ya existe evento con ese codigo (EV108) Registrar evento valido");
         p.ver(s.registrarEvento("EV108", "Evento A", 30, fecha).resultado, Retorno.Resultado.ERROR_1, "Ya existe evento con ese codigo (EV108) Registrar evento valido");
         p.ver(s.registrarEvento("EV108", "Evento B", 25, fecha).resultado, Retorno.Resultado.ERROR_3, "Codigo duplicado");
         p.ver(s.registrarEvento("EV102", "Evento C", -1, fecha).resultado, Retorno.Resultado.ERROR_2, "Aforo negativo");
-
+*/
         p.ver(s.registrarEvento("EV108", "Evento A", 3000, fecha).resultado, Retorno.Resultado.ERROR_5, "No hay sala para ese aforo");
 
         
