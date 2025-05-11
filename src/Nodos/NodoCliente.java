@@ -1,8 +1,8 @@
 package Nodos;
 
 public class NodoCliente {
-    String cedula;
-    String nombre;
+    public String cedula;
+    public String nombre;
     public NodoCliente siguiente; // esta puublico para que ande 
            
 // constructor
